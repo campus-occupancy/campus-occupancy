@@ -1,5 +1,9 @@
 /* Custom site-wide CSS */
 
+.background-landing-page {
+  background: url("images/land-page-image-background.PNG");
+  background-size: cover;
+}
 .bowfolio-green {
   color:  #376551;
 }
