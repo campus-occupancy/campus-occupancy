@@ -12,7 +12,7 @@ class LandingPage extends React.Component {
                 University of Hawaii Visualizing Campus Occupancy
               </Header>
               <Header style={{ paddingBottom: '20px', color: 'white' }} as='h3'>
-                Start by making your profile....
+                Data Visualization
               </Header>
             </Container>
           </div>
