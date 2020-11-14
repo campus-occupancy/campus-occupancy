@@ -2,3 +2,5 @@
 
 
 For details, please see http://bowfolios.github.io.
+
+This is the campus-occupancy app repo.
