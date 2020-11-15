@@ -1,7 +1,7 @@
 /* Custom site-wide CSS */
 
 .background-landing-page {
-  background: url("images/land-page-image-background.PNG");
+  background: url("images/land-page-image-background.PNG") fixed center;
   background-size: cover;
 }
 .bowfolio-green {

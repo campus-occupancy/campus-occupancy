@@ -25,7 +25,7 @@ class App extends React.Component {
       <Router>
         <div>
           <NavBar/>
-          <div style={{ paddingTop: '20px', paddingBottom: '30px' }}>
+          <div style={{ paddingTop: '10px', paddingBottom: '10px' }}>
             <Switch>
               <Route exact path="/" component={LandingPage}/>
               <ProtectedRoute path="/home" component={Home}/>
