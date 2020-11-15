@@ -9,7 +9,7 @@ class LandingPage extends React.Component {
           <div className='landing-green-background'>
             <Container textAlign='center'>
               <Header style={{ paddingTop: '20px', color: 'white', fontSize: '36pt' }} as='h1'>
-                University of Hawaii Visualizing Campus Occupancy
+                University of Hawaii Campus Occupancy
               </Header>
               <Header style={{ paddingBottom: '20px', color: 'white' }} as='h3'>
                 Data Visualization
