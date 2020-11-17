@@ -4,6 +4,11 @@
   background: url("images/land-page-image-background.PNG") fixed center;
   background-size: cover;
 }
+.form-small {
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
 .bowfolio-green {
   color:  #376551;
 }
