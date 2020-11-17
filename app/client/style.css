@@ -1,9 +1,11 @@
 /* Custom site-wide CSS */
 
+/* This is the background for landpage*/
 .background-landing-page {
   background: url("images/land-page-image-background.PNG") fixed center;
   background-size: cover;
 }
+/* This is centering the form for login and sign in*/
 .form-small {
   padding-right: 40px;
   padding-left: 40px;

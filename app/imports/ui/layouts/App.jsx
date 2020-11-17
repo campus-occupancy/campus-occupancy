@@ -13,7 +13,6 @@ import Projects from '../pages/Projects';
 import Filter from '../pages/Filter';
 import Interests from '../pages/Interests';
 import NotFound from '../pages/NotFound';
-import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
 import LandingPage from '../pages/Landing-page';
