@@ -18,6 +18,7 @@ import Signout from '../pages/Signout';
 import LandingPage from '../pages/Landing-page';
 import LogIn from '../pages/LogIn';
 import DataPage from '../pages/DataPage';
+import EditDataPage from '../pages/EditDataPage';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -34,6 +35,7 @@ class App extends React.Component {
               <Route path="/projects" component={Projects}/>
               <Route path="/interests" component={Interests}/>
               <Route path="/data" component={DataPage}/>
+              <Route path="/edit" component={EditDataPage}/>
               <ProtectedRoute path="/addproject" component={AddProject}/>
               <ProtectedRoute path="/filter" component={Filter}/>
               <Route path="/signin" component={LogIn}/>
