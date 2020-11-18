@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Container, Header, Button, Icon } from 'semantic-ui-react';
+import Covid19 from '../../api/Covid19/Covid19';
 
 /** Renders a color-blocked static landing page. */
 class LandingPage extends React.Component {
@@ -25,7 +26,7 @@ class LandingPage extends React.Component {
               </Button>
             </Container>
           </div>
-          <div className={['background-landing-page']}/>
+          <div><Covid19/></div>
         </div>
     );
   }
