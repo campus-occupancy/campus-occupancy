@@ -1,7 +1,4 @@
 {
-  "public": {
-
-  },
   "monti": {
     "appId": "kmPpesxNuStim93st",
     "appSecret": "00932a97-6c88-46ee-9737-231825c737be"
@@ -139,4 +136,3 @@
   ],
   "loadAssetsFile":  false
 }
-
