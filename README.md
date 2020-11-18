@@ -4,4 +4,5 @@
 For details, please see http://bowfolios.github.io.
 
 This is the campus-occupancy app repo.
-## Note that When master is update be sure to make a branch based on current Master.
+## I already created a user call john@foo.com, Password: 4
+## Delete this if you do Meteor reset.
