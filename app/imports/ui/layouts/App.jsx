@@ -4,7 +4,6 @@ import { Meteor } from 'meteor/meteor';
 import 'semantic-ui-css/semantic.css';
 import { Roles } from 'meteor/alanning:roles';
 import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
-import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import Home from '../pages/Home';
 import Profiles from '../pages/Profiles';
@@ -19,6 +18,7 @@ import LandingPage from '../pages/Landing-page';
 import LogIn from '../pages/LogIn';
 import DataPage from '../pages/DataPage';
 import EditDataPage from '../pages/EditDataPage';
+import CampusNavBar from '../components/CampusNavBar';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -26,7 +26,7 @@ class App extends React.Component {
     return (
       <Router>
         <div>
-          <NavBar/>
+          <CampusNavBar/>
           <div style={{ paddingTop: '10px', paddingBottom: '10px' }}>
             <Switch>
               <Route exact path="/" component={LandingPage}/>
