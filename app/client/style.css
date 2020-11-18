@@ -2,6 +2,8 @@
 
 /* This is the background for landpage*/
 .background-landing-page {
+  width: 1600px;
+  height: 500px;
   background: url("images/land-page-image-background.PNG") fixed center;
   background-size: cover;
 }

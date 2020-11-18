@@ -61,7 +61,7 @@ export default class LogIn extends React.Component {
                         className='form-small'
                         size='large'
                         id="signin-form-email"
-                        icon={<Icon name='user' inverted bordered/>}
+                        icon={<Icon name='user'/>}
                         iconPosition="left"
                         name="email"
                         type="email"
@@ -72,7 +72,7 @@ export default class LogIn extends React.Component {
                         className='form-small'
                         size='large'
                         id="signin-form-password"
-                        icon={<Icon name='lock' inverted bordered/>}
+                        icon={<Icon name='lock'/>}
                         iconPosition="left"
                         name="password"
                         placeholder="Password"

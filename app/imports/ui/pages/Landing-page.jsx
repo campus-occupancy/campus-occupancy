@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Grid, Image, Container, Header, Button, Icon } from 'semantic-ui-react';
+import { Container, Header, Button, Icon } from 'semantic-ui-react';
 
 /** Renders a color-blocked static landing page. */
 class LandingPage extends React.Component {
@@ -25,19 +25,8 @@ class LandingPage extends React.Component {
               </Button>
             </Container>
           </div>
-          <div className={['background-landing-page']}>
-              <Header style={{ color: '#376551' }} as='h2' textAlign='center'></Header>
-            <Grid container stackable columns={2} textAlign='center'>
-              <Grid.Column>
-                <Image size='big' src="/images/profiles-page.png"/>
-              </Grid.Column>
-              <Grid.Column>
-                <Image size='big' src='images/projects-page.png'/>
-              </Grid.Column>
-            </Grid>
-          </div>
+          <div className={['background-landing-page']}/>
         </div>
-
     );
   }
 }
