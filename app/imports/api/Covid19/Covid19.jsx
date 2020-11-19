@@ -18,7 +18,7 @@ const Covid19 = () => {
   return (
       <div>
         {buildings.length === 0 ? <Loading/> : <div><CovidMap/><Legend/></div>}
-      </div>);
+      </div>); // I plan to make legend the slider
 };
 
 export default Covid19;
