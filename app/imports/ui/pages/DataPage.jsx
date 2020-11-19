@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Grid, Header } from 'semantic-ui-react';
+import Covid19 from '../../api/Covid19/Covid19';
 
 /** Renders a color-blocked static landing page. */
 class DataPage extends React.Component {
@@ -16,7 +17,7 @@ class DataPage extends React.Component {
               </Header>
             </Container>
           </div>
-          <div className={['background-landing-page']}>
+          <div>
             <Grid container stackable columns={2} textAlign='center'>
               <Grid.Column>
                 <Header as='h3'>Json File in Imported Form</Header>
@@ -25,6 +26,7 @@ class DataPage extends React.Component {
                 <Header as='h3'>Json File Data in Table Form</Header>
               </Grid.Column>
             </Grid>
+            <div><Covid19/></div>
           </div>
         </div>
 
