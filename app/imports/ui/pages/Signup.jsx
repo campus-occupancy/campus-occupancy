@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import swal from 'sweetalert';
 import { Link, Redirect } from 'react-router-dom';
 import { Container, Form, Grid, Header, Message, Segment } from 'semantic-ui-react';
 import { Accounts } from 'meteor/accounts-base';
@@ -37,7 +36,6 @@ class Signup extends React.Component {
         });
       }
     });
-    swal('This is will be fixed. But your have created the account. Click on home or logo!');
   }
 
   /** Display the signup form. */

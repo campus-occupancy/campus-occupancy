@@ -1,7 +1,7 @@
 import { Selector } from 'testcafe';
+import { signupPage } from './signup.page';
 
 class NavBar {
-
   /** If someone is logged in, then log them out, otherwise do nothing. */
   async ensureLogout(testController) {
     const loggedInUser = await Selector('#navbar-current-user').exists;
@@ -13,8 +13,7 @@ class NavBar {
 
   async gotoSigninPage(testController) {
     await this.ensureLogout(testController);
-    await testController.click('#login-dropdown');
-    await testController.click('#login-dropdown-sign-in');
+    await testController.click('#login-button');
   }
 
   async gotoProfilesPage(testController) {
@@ -52,8 +51,9 @@ class NavBar {
   /** Pull down login menu, go to sign up page. */
   async gotoSignupPage(testController) {
     await this.ensureLogout(testController);
-    await testController.click('#login-dropdown');
-    await testController.click('#login-dropdown-sign-up');
+    console.log('got to sign up');
+    await this.gotoSigninPage(testController);
+    await testController.click('#signup-page');
   }
 }
 

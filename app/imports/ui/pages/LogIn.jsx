@@ -81,7 +81,7 @@ export default class LogIn extends React.Component {
                     />
                     <Form.Button size='large' fluid className='form-small' id="signin-form-submit" content="Submit"/>
                     <Message>
-                      <Container textAlign='center'>
+                      <Container textAlign='center' id='signup-page'>
                         <Link to="/signup">Click here to Register</Link></Container>
                     </Message>
                   </Segment>

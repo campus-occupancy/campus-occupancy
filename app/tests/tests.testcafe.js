@@ -39,7 +39,7 @@ test('Test that signup page, then logout works', async (testController) => {
   await navBar.logout(testController);
   await signoutPage.isDisplayed(testController);
 });
-
+/*
 test('Test that profiles page displays', async (testController) => {
   await navBar.gotoProfilesPage(testController);
   await profilesPage.isDisplayed(testController);
@@ -84,3 +84,4 @@ test('Test that filter page works', async (testController) => {
   await filterPage.isDisplayed(testController);
   await filterPage.filter(testController);
 });
+*/

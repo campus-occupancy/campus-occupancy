@@ -16,7 +16,7 @@ class LandingPage extends React.Component {
               <Header style={{ paddingBottom: '20px', color: 'white' }} as='h3'>
                 Log in to Access Data Visualization
               </Header>
-              <Button inverted style={{ marginBottom: '20px' }} size='huge' as={NavLink} exact to="/signin" animated>
+              <Button id='login-button' inverted style={{ marginBottom: '20px' }} size='huge' as={NavLink} exact to="/signin" animated>
                 <Button.Content visible>
                   Log In
                 </Button.Content>
