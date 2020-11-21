@@ -1,5 +1,4 @@
 import { Selector } from 'testcafe';
-import { signupPage } from './signup.page';
 
 class NavBar {
   /** If someone is logged in, then log them out, otherwise do nothing. */

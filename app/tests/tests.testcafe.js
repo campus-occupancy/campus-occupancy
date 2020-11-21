@@ -2,12 +2,6 @@ import { landingPage } from './landing.page';
 import { signinPage } from './signin.page';
 import { signoutPage } from './signout.page';
 import { signupPage } from './signup.page';
-import { profilesPage } from './profiles.page';
-import { projectsPage } from './projects.page';
-import { interestsPage } from './interests.page';
-import { homePage } from './home.page';
-import { addProjectPage } from './addproject.page';
-import { filterPage } from './filter.page';
 import { navBar } from './navbar.component';
 
 /* global fixture:false, test:false */
