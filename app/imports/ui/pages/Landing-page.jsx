@@ -5,9 +5,6 @@ import Covid19 from '../../api/Covid19/Covid19';
 
 /** Renders a color-blocked static landing page. */
 class LandingPage extends React.Component {
-  
-  
-  
   render() {
     return (
         <div id="landing-page">
