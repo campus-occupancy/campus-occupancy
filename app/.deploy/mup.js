@@ -2,7 +2,7 @@ module.exports = {
   servers: {
     one: {
       // TODO: set host address, username, and authentication method
-      host: '164.90.146.203',
+      host: 'campus-occupancy.top',
       username: 'root',
       // pem: './path/to/pem'
        password: 'ek!tRy35*FXmE*i'
@@ -26,7 +26,7 @@ module.exports = {
     env: {
       // TODO: Change to your app's url
       // If you are using ssl, it needs to start with https://
-      ROOT_URL: 'http://164.90.146.203',
+      ROOT_URL: 'https://campus-occupancy.top/#/',
       MONGO_URL: 'mongodb://mongodb/meteor',
       MONGO_OPLOG_URL: 'mongodb://mongodb/local',
     },
@@ -54,12 +54,13 @@ module.exports = {
   // Use the proxy to setup ssl or to route requests to the correct
   // app when there are several apps
 
-  // proxy: {
-  //   domains: 'mywebsite.com,www.mywebsite.com',
+  proxy: {
+     domains: 'campus-occupancy.top',
 
-  //   ssl: {
-  //     // Enable Let's Encrypt
-  //     letsEncryptEmail: 'email@domain.com'
-  //   }
-  // }
+     ssl: {
+       // Enable Let's Encrypt
+       letsEncryptEmail: 'fstraub@hawaii.edu',
+       forceSSL: true
+     }
+   }
 };
