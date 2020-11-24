@@ -23,6 +23,7 @@ class LoadBuildingsTask {
       const covidBuilding = covidBuildings.find((covidBuilding) => building.properties.Building === covidBuilding.Building);
 
       building.properties.confirmed = 0;
+      console.log(building.properties.confirmed);
       building.properties.confirmedText = '0';
 
       if (covidBuilding != null) {
