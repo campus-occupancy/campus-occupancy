@@ -9,7 +9,7 @@ import { editdataPage } from './editdata.page';
 /* global fixture:false, test:false */
 
 /** Credentials for one of the sample users defined in settings.development.json. */
-const credentials = { username: 'john@foo.com', password: 'changeme', firstName: 'Philip', lastName: 'Johnson' };
+const credentials = { username: 'johnson@hawaii.edu', password: 'foo', firstName: 'Philip', lastName: 'Johnson' };
 
 fixture('Bowfolios localhost test with default db')
     .page('http://localhost:3000');
