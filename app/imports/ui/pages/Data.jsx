@@ -3,10 +3,10 @@ import { Container, Grid, Header } from 'semantic-ui-react';
 import Covid19 from '../../api/Covid19/Covid19';
 
 /** Renders a color-blocked static landing page. */
-class DataPage extends React.Component {
+class Data extends React.Component {
   render() {
     return (
-        <div id="landing-page">
+        <div id="data-page">
           <div className='landing-green-background'>
             <Container textAlign='center'>
               <Header style={{ paddingTop: '20px', color: 'white', fontSize: '36pt' }} as='h1'>
@@ -34,4 +34,4 @@ class DataPage extends React.Component {
   }
 }
 
-export default DataPage;
+export default Data;

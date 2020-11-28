@@ -31,6 +31,14 @@ class NavBar {
     await testController.click('#addProjectMenuItem');
   }
 
+  async gotoDataPage(testController) {
+    await testController.click('#dataMenuPage');
+  }
+
+  async gotoEditDataPage(testController) {
+    await testController.click('#editDataPage');
+  }
+
   async gotoFilterPage(testController) {
     await testController.click('#filterMenuItem');
   }

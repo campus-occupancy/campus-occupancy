@@ -3,11 +3,13 @@ import { signinPage } from './signin.page';
 import { signoutPage } from './signout.page';
 import { signupPage } from './signup.page';
 import { navBar } from './navbar.component';
+import { dataPage } from './data.page';
+import { editdataPage } from './editdata.page';
 
 /* global fixture:false, test:false */
 
 /** Credentials for one of the sample users defined in settings.development.json. */
-const credentials = { username: 'johnson@hawaii.edu', password: 'foo', firstName: 'Philip', lastName: 'Johnson' };
+const credentials = { username: 'john@foo.com', password: 'changeme', firstName: 'Philip', lastName: 'Johnson' };
 
 fixture('Bowfolios localhost test with default db')
     .page('http://localhost:3000');
@@ -33,13 +35,27 @@ test('Test that signup page, then logout works', async (testController) => {
   await navBar.logout(testController);
   await signoutPage.isDisplayed(testController);
 });
-/*
-test('Test that profiles page displays', async (testController) => {
-  await navBar.gotoProfilesPage(testController);
-  await profilesPage.isDisplayed(testController);
-  await profilesPage.hasDefaultProfiles(testController);
+
+test('Test that data page displays', async (testController) => {
+  await navBar.ensureLogout(testController);
+  await navBar.gotoSigninPage(testController);
+  await signinPage.signin(testController, credentials.username, credentials.password);
+  await navBar.gotoDataPage(testController);
+  await dataPage.isDisplayed(testController);
+  await navBar.logout(testController);
+  await signoutPage.isDisplayed(testController);
 });
 
+test('Test that data page displays', async (testController) => {
+  await navBar.ensureLogout(testController);
+  await navBar.gotoSigninPage(testController);
+  await signinPage.signin(testController, credentials.username, credentials.password);
+  await navBar.gotoEditDataPage(testController);
+  await editdataPage.isDisplayed(testController);
+  await navBar.logout(testController);
+  await signoutPage.isDisplayed(testController);
+});
+/*
 test('Test that interests page displays', async (testController) => {
   await navBar.gotoInterestsPage(testController);
   await interestsPage.isDisplayed(testController);

@@ -16,7 +16,7 @@ import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
 import LandingPage from '../pages/Landing-page';
 import LogIn from '../pages/LogIn';
-import DataPage from '../pages/DataPage';
+import Data from '../pages/Data';
 import EditDataPage from '../pages/EditDataPage';
 import CampusNavBar from '../components/CampusNavBar';
 
@@ -34,7 +34,7 @@ class App extends React.Component {
               <Route path="/profiles" component={Profiles}/>
               <Route path="/projects" component={Projects}/>
               <Route path="/interests" component={Interests}/>
-              <Route path="/data" component={DataPage}/>
+              <Route path="/data" component={Data}/>
               <Route path="/edit" component={EditDataPage}/>
               <ProtectedRoute path="/addproject" component={AddProject}/>
               <ProtectedRoute path="/filter" component={Filter}/>
