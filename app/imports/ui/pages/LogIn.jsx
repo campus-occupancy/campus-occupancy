@@ -42,20 +42,25 @@ export default class LogIn extends React.Component {
     }
     // Otherwise return the Login form.
     return (
-        <div style={ { 'background-color': 'beige', 'padding-top': '10vh', 'padding-bottom': '10vh' } }>
+        <div style={ {
+          height: '550px',
+          'background-color': 'beige',
+          'padding-top': '10vh',
+          'padding-bottom': '10vh',
+        } }>
           <Container id="signin-page">
           <Grid textAlign="center" verticalAlign="middle" centered columns={2}>
             <Grid.Column>
               <Form onSubmit={this.submit}>
-                <Segment raised style={{ padding: '0px', border: '5px solid black' }}>
+                <Segment raised style={{ padding: '0px', border: '4px solid black' }}>
                   <Container text fluid textAlign='center'
                                style={{
                                  'padding-top': '20px',
                                  'padding-bottom': '20px',
-                                 'background-color': '#21b5cc',
+                                 'background-color': '#376551',
                                  'margin-bottom': '40px',
                                }}>
-                    <Header inverted as={'h1'}>LogIn</Header>
+                    <Header inverted as='h1'>LOGIN</Header>
                     </Container>
                     <Form.Input
                         className='form-small'
