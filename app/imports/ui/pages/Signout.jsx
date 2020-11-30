@@ -26,7 +26,7 @@ export default class Signout extends React.Component {
               You have Successfully Logged Out of the Application
             </Header>
             <div style={ { marginTop: '20px' } }>
-              <Button id='login-button' inverted style={{ marginBottom: '20px' }} size='huge' as={NavLink} exact to='/'>Home</Button>
+              <Button id='home-button' inverted style={{ marginBottom: '20px' }} size='huge' as={NavLink} exact to='/'>Home</Button>
               <Divider>Or</Divider>
               <Button id='login-button' inverted
                       style={{

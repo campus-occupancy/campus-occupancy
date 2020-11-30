@@ -58,7 +58,6 @@ class NavBar {
   /** Pull down login menu, go to sign up page. */
   async gotoSignupPage(testController) {
     await this.ensureLogout(testController);
-    console.log('got to sign up');
     await this.gotoSigninPage(testController);
     await testController.click('#signup-page');
   }

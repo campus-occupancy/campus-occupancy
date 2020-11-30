@@ -11,18 +11,42 @@ import { editdataPage } from './editdata.page';
 /** Credentials for one of the sample users defined in settings.development.json. */
 const credentials = { username: 'johnson@hawaii.edu', password: 'foo', firstName: 'Philip', lastName: 'Johnson' };
 
-fixture('Bowfolios localhost test with default db')
+fixture('Campus-Occupancy localhost test with default db')
     .page('http://localhost:3000');
 
 test('Test that landing page shows up', async (testController) => {
   await landingPage.isDisplayed(testController);
 });
 
+test('Test that the login button at landing page works', async (testController) => {
+  await landingPage.isDisplayed(testController);
+  await landingPage.gotToLogIn(testController);
+  await signinPage.isDisplayed(testController);
+});
+
 test('Test that signin and signout work', async (testController) => {
-  await navBar.gotoSigninPage(testController);
+  await landingPage.gotToLogIn(testController);
   await signinPage.signin(testController, credentials.username, credentials.password);
   await navBar.logout(testController);
   await signoutPage.isDisplayed(testController);
+});
+
+test('Test that sign out home button work', async (testController) => {
+  await landingPage.gotToLogIn(testController);
+  await signinPage.signin(testController, credentials.username, credentials.password);
+  await navBar.logout(testController);
+  await signoutPage.isDisplayed(testController);
+  await signoutPage.backToHome(testController);
+  await landingPage.isDisplayed(testController);
+});
+
+test('Test that sign out signin button work', async (testController) => {
+  await landingPage.gotToLogIn(testController);
+  await signinPage.signin(testController, credentials.username, credentials.password);
+  await navBar.logout(testController);
+  await signoutPage.isDisplayed(testController);
+  await signoutPage.backToLogIn(testController);
+  await signinPage.isDisplayed(testController);
 });
 
 test('Test that signup page, then logout works', async (testController) => {
