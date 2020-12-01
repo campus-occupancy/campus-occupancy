@@ -8,10 +8,14 @@ class LoadBuildingsTask {
 
   load = (setState) => {
     this.setState = setState;
-    papa.parse(this.covid19DataUrl, {
+    papa.parse('https://raw.githubusercontent.com/HACC2020/data/main/uh_occupancy/2020-0824_1200pm-259pm_devices_1598317333.csv', {
       download: true,
+      dynamicTyping: true,
       header: true,
-      complete: (result) => this.#processCovidData(result.data),
+      complete: (result) => {
+        console.log(result);
+        this.#processCovidData(result.data);
+      },
     });
 
   };
@@ -26,7 +30,7 @@ class LoadBuildingsTask {
       building.properties.confirmedText = '0';
 
       if (covidBuilding != null) {
-        const confirmed = Number(covidBuilding.UniqueClients);
+        const confirmed = covidBuilding['Unique Clients'];
         building.properties.confirmed = confirmed;
         building.properties.confirmedText = confirmed;
       }
