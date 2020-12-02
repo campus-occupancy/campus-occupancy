@@ -6,6 +6,10 @@ import { withRouter, NavLink } from 'react-router-dom';
 import { Menu, Dropdown, Image } from 'semantic-ui-react';
 import { Roles } from 'meteor/alanning:roles';
 
+
+
+
+
 /** The NavBar appears at the top of every page. Rendered by the App Layout component.
  * Currently nav bar contains the the home logo, data, edit data and sign out at left side
  * The navbar logo will take user back to the data page. */
