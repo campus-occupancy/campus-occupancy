@@ -4,9 +4,12 @@ import LoadBuildingsTask from '../../../tasks/LoadBuildingsTask';
 import CovidMap from './CovidMap';
 import Legend from './Legend';
 import Loading from './Loading';
+import CovidSlider from './covidSlider';
+import legendItems from '../../../entities/LegendItems';
 
 const Covid19 = () => {
   const [buildings, setBuildings] = useState([]);
+  const legendItemsInReverse = [...legendItems].reverse();
 
   const load = () => {
     const loadBuildingsTask = new LoadBuildingsTask();
@@ -17,8 +20,13 @@ const Covid19 = () => {
 
   return (
       <div>
-        {buildings.length === 0 ? <Loading/> : <div><CovidMap/><Legend/></div>}
-      </div>); // I plan to make legend the slider
+        {buildings.length === 0 ? <Loading/> : <div>
+          <CovidMap/>
+          <Legend legendItems = {legendItemsInReverse} />
+          <CovidSlider/>
+        </div>
+        }
+      </div>);
 };
 
 export default Covid19;

@@ -4,12 +4,11 @@ import 'leaflet/dist/leaflet.css';
 import datas from '../../../data/campusmap.json';
 
 const CovidMap = () => {
-  <div>Top Right</div>;
   const mapStyle = {
     fillColor: 'white',
-    weight: 1,
+    weight: 0,
     color: 'black',
-    fillOpacity: 0.5,
+    fillOpacity: 0.8,
   };
 
   const onEachBuilding = (building, layer) => {

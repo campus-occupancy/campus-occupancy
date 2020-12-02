@@ -1,5 +1,12 @@
 import papa from 'papaparse';
 import { features } from '../data/campusmap.json';
+import legendItems from '../entities/LegendItems';
+
+/*
+* File: LoadBuildingsTask
+* Description: This task of this class is basically to gather data and parses it into a json file
+* which is then used by the Covid components to display it on the map
+ */
 
 class LoadBuildingsTask {
   covid19DataUrl = 'https://raw.githubusercontent.com/HACC2020/data/main/uh_occupancy/2020-0824_1200pm-259pm_devices_1598317333.csv';
@@ -8,7 +15,7 @@ class LoadBuildingsTask {
 
   load = (setState) => {
     this.setState = setState;
-    papa.parse('https://raw.githubusercontent.com/HACC2020/data/main/uh_occupancy/2020-0824_1200pm-259pm_devices_1598317333.csv', {
+    papa.parse(this.covid19DataUrl, {
       download: true,
       dynamicTyping: true,
       header: true,
@@ -34,11 +41,18 @@ class LoadBuildingsTask {
         building.properties.confirmed = confirmed;
         building.properties.confirmedText = confirmed;
       }
-
+      this.#setBuildingColor(building);
     }
 
     this.setState(features);
 
+  };
+
+  #setBuildingColor = (building) => {
+    const legendItem = legendItems.find((item) => item.isFor(building.properties.confirmed));
+
+    // eslint-disable-next-line no-param-reassign
+    if (legendItem != null) building.properties.color = legendItem.color;
   };
 }
 
