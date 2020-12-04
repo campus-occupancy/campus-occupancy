@@ -70,6 +70,7 @@ if (Meteor.users.find().count() === 0) {
 if ((Meteor.settings.loadAssetsFile) && (Meteor.users.find().count() < 7)) {
   const assetsFileName = 'data.json';
   console.log(`Loading data from private/${assetsFileName}`);
+  // eslint-disable-next-line no-unused-vars
   const jsonData = JSON.parse(Assets.getText(assetsFileName));
   // jsonData.profiles.map(profile => addProfile(profile)); This needs to be fixed with the data page.
   // jsonData.projects.map(project => addProject(project));
