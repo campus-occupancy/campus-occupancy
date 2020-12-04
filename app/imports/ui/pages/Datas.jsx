@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Icon, Label, Menu, Table, Container, Loader, Card, Image, Label, Header } from 'semantic-ui-react';
+import { Icon, Label, Menu, Table, Container, Loader, Card, Image, Header } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { _ } from 'meteor/underscore';
@@ -8,6 +8,7 @@ import { Datas } from '../../api/dataDensity/Datas';
 import { ProfilesInterests } from '../../api/profiles/ProfilesInterests';
 import { ProfilesProjects } from '../../api/profiles/ProfilesProjects';
 import { Projects } from '../../api/projects/Projects';
+import Covid19 from '../../api/Covid19/Covid19';
 
 /** Returns the Profile and associated Projects and Interests associated with the passed user email. */
 function getProfileData(dateTime) {
@@ -69,7 +70,7 @@ const DataTable = (props) => (
     </Table>
 );
 
-MakeCard.propTypes = {
+DataTable.propTypes = {
   profile: PropTypes.object.isRequired,
 };
 
@@ -88,7 +89,7 @@ class DatasPage extends React.Component {
     return (
       <Container id="profiles-page">
         <Card.Group>
-          {_.map(profileData, (data, index) => <MakeCard key={index} data={data}/>)}
+          {_.map(profileData, (data, index) => <DataTable key={index} data={data}/>)}
         </Card.Group>
       </Container>
     );

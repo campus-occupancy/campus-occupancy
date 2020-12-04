@@ -38,6 +38,20 @@ function addProfile({ firstName, lastName, bio, title, interests, projects, pict
   interests.map(interest => addInterest(interest));
 }
 
+/** Defines a new user and associated profile. Error if user already exists. */
+function addData({ firstName, lastName, bio, title, interests, projects, picture, email, role }) {
+  console.log(`Defining data ${email}`);
+  // Define the user in the Meteor accounts package.
+  createUser(email, role);
+  // Create the profile.
+  Profiles.collection.insert({ firstName, lastName, bio, title, picture, email });
+  // Add interests and projects.
+  interests.map(interest => ProfilesInterests.collection.insert({ profile: email, interest }));
+  projects.map(project => ProfilesProjects.collection.insert({ profile: email, project }));
+  // Make sure interests are defined in the Interests collection if they weren't already.
+  interests.map(interest => addInterest(interest));
+}
+
 /** Define a new project. Error if project already exists.  */
 function addProject({ name, homepage, description, interests, picture }) {
   console.log(`Defining project ${name}`);
@@ -72,6 +86,5 @@ if ((Meteor.settings.loadAssetsFile) && (Meteor.users.find().count() < 7)) {
   console.log(`Loading data from private/${assetsFileName}`);
   // eslint-disable-next-line no-unused-vars
   const jsonData = JSON.parse(Assets.getText(assetsFileName));
-  // jsonData.profiles.map(profile => addProfile(profile)); This needs to be fixed with the data page.
-  // jsonData.projects.map(project => addProject(project));
+  jsonData.dateTime.map(dateTime => addData(dateTime));
 }
