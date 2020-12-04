@@ -12,7 +12,7 @@ class DatasCollection {
     // Define the structure of each document in the collection.
     this.schema = new SimpleSchema({
       dateTime: { type: String, index: true, unique: true },
-      people: { type: String, optional: true }, // the people category displays the amount of people in a building
+      occupancy: { type: String, optional: true }, // the people category displays the amount of people in a building
       building: { type: String, optional: true },
     }, { tracker: Tracker });
     // Ensure collection documents obey schema.
