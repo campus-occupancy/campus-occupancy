@@ -71,6 +71,6 @@ if ((Meteor.settings.loadAssetsFile) && (Meteor.users.find().count() < 7)) {
   const assetsFileName = 'data.json';
   console.log(`Loading data from private/${assetsFileName}`);
   const jsonData = JSON.parse(Assets.getText(assetsFileName));
-  jsonData.profiles.map(profile => addProfile(profile));
-  jsonData.projects.map(project => addProject(project));
+  // jsonData.profiles.map(profile => addProfile(profile)); This needs to be fixed with the data page.
+  // jsonData.projects.map(project => addProject(project));
 }
