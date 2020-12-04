@@ -68,9 +68,10 @@ if (Meteor.users.find().count() === 0) {
  * User count check is to make sure we don't load the file twice, which would generate errors due to duplicate info.
  */
 if ((Meteor.settings.loadAssetsFile) && (Meteor.users.find().count() < 7)) {
-  const assetsFileName = 'density.json'; // have to edit the name of this file just a placeholder
+  const assetsFileName = 'data.json'; // have to edit the name of this file just a placeholder
   console.log(`Loading data from private/${assetsFileName}`);
+  // eslint-disable-next-line no-unused-vars
   const jsonData = JSON.parse(Assets.getText(assetsFileName));
-  // jsonData.profiles.map(profile => addProfile(profile));
-  // jsonData.projects.map(project => addProject(project));
+   // jsonData.defaultDensityData.map(defaultDensityData => addProfile(defaultDensityData)); this needs to be fixed so it outputs the default data
+   // jsonData.projects.map(project => addProject(project));
 }
