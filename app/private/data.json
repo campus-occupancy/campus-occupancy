@@ -1,4 +1,8 @@
-
+/** The unique key I used for this is the Device name, 
+* I was not able to use the dataTime provided earlire, We may need to add the time to each 
+* of the objects in the density array.
+I also changed Unique Client to Unique becasue I did not know how to make a two string prop name in the schema.
+*/
 {
   "profiles": [
     {
