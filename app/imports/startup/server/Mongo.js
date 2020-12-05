@@ -7,6 +7,7 @@ import { Profiles } from '../../api/profiles/Profiles';
 import { ProfilesProjects } from '../../api/profiles/ProfilesProjects';
 import { ProfilesInterests } from '../../api/profiles/ProfilesInterests';
 import { Interests } from '../../api/interests/Interests';
+import Datas from '../../ui/pages/Datas';
 
 /* eslint-disable no-console */
 
@@ -39,16 +40,16 @@ function addProfile({ firstName, lastName, bio, title, interests, projects, pict
 }
 
 /** Defines a new user and associated profile. Error if user already exists. */
-function addData({ firstName, lastName, bio, title, interests, projects, picture, email, role }) {
-  console.log(`Defining data ${email}`);
+function addData({ dateTime, occupancy, building }) {
+  console.log(`Defining data ${dateTime}`);
   // Define the user in the Meteor accounts package.
   // Create the profile.
-  Profiles.collection.insert({ firstName, lastName, bio, title, picture, email });
+  //Datas.collection.insert({ dateTime, occupancy, building });
   // Add interests and projects.
-  interests.map(interest => ProfilesInterests.collection.insert({ profile: email, interest }));
-  projects.map(project => ProfilesProjects.collection.insert({ profile: email, project }));
+  // interests.map(interest => ProfilesInterests.collection.insert({ profile: email, interest }));
+  // projects.map(project => ProfilesProjects.collection.insert({ profile: email, project }));
   // Make sure interests are defined in the Interests collection if they weren't already.
-  interests.map(interest => addInterest(interest));
+  // interests.map(interest => addInterest(interest));
 }
 
 /** Define a new project. Error if project already exists.  */

@@ -3,183 +3,210 @@
   "densityData": [
     [
       {
-        "dateTime": "2020-0824_300pm-559pm"
-      },
-      {
+        "dateTime": "2020-0824_300pm-559pm",
         "Device": "Hamilton P2 508",
         "Max Clients": 0,
         "Unique Clients": 0,
         "Building": "Hamilton Library"
       },
       {
+        "dateTime": "2020-0824_300pm-559pm",
         "Device": "Hamilton P2 014 Ewa",
         "Max Clients": 1,
         "Unique Clients": 3,
         "Building": "Hamilton Library"
       },
       {
+        "dateTime": "2020-0824_300pm-559pm",
         "Device": "Hamilton 4th Fl Asia 20",
         "Max Clients": 0,
         "Unique Clients": 0,
         "Building": "Hamilton Library"
       },
       {
+        "dateTime": "2020-0824_300pm-559pm",
         "Device": "Hamilton P1 002K",
         "Max Clients": 0,
         "Unique Clients": 0,
         "Building": "Hamilton Library"
       },
       {
+        "dateTime": "2020-0824_300pm-559pm",
         "Device": "Hamilton P2 112",
         "Max Clients": 1,
         "Unique Clients": 10,
         "Building": "Hamilton Library"
       },
       {
+        "dateTime": "2020-0824_300pm-559pm",
         "Device": "Hamilton P2 3rdFl-Freight Elevator",
         "Max Clients": 0,
         "Unique Clients": 0,
         "Building": "Hamilton Library"
       },
       {
+        "dateTime": "2020-0824_300pm-559pm",
         "Device": "Hamilton P2 026",
         "Max Clients": 1,
         "Unique Clients": 4,
         "Building": "Hamilton Library"
       },
       {
+        "dateTime": "2020-0824_300pm-559pm",
         "Device": "Hamilton P2 306 DH",
         "Max Clients": 1,
         "Unique Clients": 1,
         "Building": "Hamilton Library"
       },
       {
+        "dateTime": "2020-0824_300pm-559pm",
         "Device": "Hamilton 4th Fl Asia 16",
         "Max Clients": 0,
         "Unique Clients": 0,
         "Building": "Hamilton Library"
       },
       {
+        "dateTime": "2020-0824_300pm-559pm",
         "Device": "Hamilton P2 159 Mauka",
         "Max Clients": 10,
         "Unique Clients": 33,
         "Building": "Hamilton Library"
       },
       {
+        "dateTime": "2020-0824_300pm-559pm",
         "Device": "Hamilton 4th Fl Asia 34",
         "Max Clients": 0,
         "Unique Clients": 0,
         "Building": "Hamilton Library"
       },
       {
+        "dateTime": "2020-0824_300pm-559pm",
         "Device": "Hamilton P1 101 Hallway",
         "Max Clients": 4,
         "Unique Clients": 68,
         "Building": "Hamilton Library"
       },
       {
+        "dateTime": "2020-0824_300pm-559pm",
         "Device": "Hamilton P2 217 Hallway",
         "Max Clients": 0,
         "Unique Clients": 0,
         "Building": "Hamilton Library"
       },
       {
+        "dateTime": "2020-0824_300pm-559pm",
         "Device": "Hamilton P2 008 DH",
         "Max Clients": 1,
         "Unique Clients": 1,
         "Building": "Hamilton Library"
       },
       {
+        "dateTime": "2020-0824_300pm-559pm",
         "Device": "Hamilton P1 159 Makai",
         "Max Clients": 16,
         "Unique Clients": 32,
         "Building": "Hamilton Library"
       },
       {
+        "dateTime": "2020-0824_300pm-559pm",
         "Device": "Hamilton P1 003 Makai",
         "Max Clients": 1,
         "Unique Clients": 3,
         "Building": "Hamilton Library"
       },
       {
+        "dateTime": "2020-0824_300pm-559pm",
         "Device": "Hamilton P1 006A GovDocs",
         "Max Clients": 0,
         "Unique Clients": 0,
         "Building": "Hamilton Library"
       },
       {
+        "dateTime": "2020-0824_300pm-559pm",
         "Device": "Hamilton P2 008 Ewa",
         "Max Clients": 4,
         "Unique Clients": 9,
         "Building": "Hamilton Library"
       },
       {
+        "dateTime": "2020-0824_300pm-559pm",
         "Device": "Hamilton P2 123",
         "Max Clients": 2,
         "Unique Clients": 11,
         "Building": "Hamilton Library"
       },
       {
+        "dateTime": "2020-0824_300pm-559pm",
         "Device": "Hamilton P1 006 Ewa",
         "Max Clients": 1,
         "Unique Clients": 2,
         "Building": "Hamilton Library"
       },
       {
+        "dateTime": "2020-0824_300pm-559pm",
         "Device": "Spalding 258A",
         "Max Clients": 0,
         "Unique Clients": 0,
         "Building": "Spalding Hall"
       },
       {
+        "dateTime": "2020-0824_300pm-559pm",
         "Device": "Spalding 258",
         "Max Clients": 2,
         "Unique Clients": 6,
         "Building": "Spalding Hall"
       },
       {
+        "dateTime": "2020-0824_300pm-559pm",
         "Device": "Edmondson 114",
         "Max Clients": 4,
         "Unique Clients": 10,
         "Building": "Edmondson Hall"
       },
       {
+        "dateTime": "2020-0824_300pm-559pm",
         "Device": "Edmondson 112",
         "Max Clients": 13,
         "Unique Clients": 17,
         "Building": "Edmondson Hall"
       },
       {
+        "dateTime": "2020-0824_300pm-559pm",
         "Device": "Edmondson 111",
         "Max Clients": 0,
         "Unique Clients": 1,
         "Building": "Edmondson Hall"
       },
       {
+        "dateTime": "2020-0824_300pm-559pm",
         "Device": "Edmondson 3rd Fl Lanai",
         "Max Clients": 1,
         "Unique Clients": 16,
         "Building": "Edmondson Hall"
       },
       {
+        "dateTime": "2020-0824_300pm-559pm",
         "Device": "Edmondson 1st Fl Lanai",
         "Max Clients": 4,
         "Unique Clients": 95,
         "Building": "Edmondson Hall"
       },
       {
+        "dateTime": "2020-0824_300pm-559pm",
         "Device": "Edmondson 2nd Fl Lanai",
         "Max Clients": 2,
         "Unique Clients": 29,
         "Building": "Edmondson Hall"
       },
       {
+        "dateTime": "2020-0824_300pm-559pm",
         "Device": "Edmondson 104",
         "Max Clients": 0,
         "Unique Clients": 2,
         "Building": "Edmondson Hall"
       },
       {
+        "dateTime": "2020-0824_300pm-559pm",
         "Device": "Edmondson 101",
         "Max Clients": 10,
         "Unique Clients": 25,

@@ -71,7 +71,7 @@ const DataTable = (props) => (
 );
 
 DataTable.propTypes = {
-  profile: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired,
 };
 
 /** Renders the Data Collection as a Table. */
