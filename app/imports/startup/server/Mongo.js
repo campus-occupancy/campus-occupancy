@@ -7,6 +7,7 @@ import { Profiles } from '../../api/profiles/Profiles';
 import { ProfilesProjects } from '../../api/profiles/ProfilesProjects';
 import { ProfilesInterests } from '../../api/profiles/ProfilesInterests';
 import { Interests } from '../../api/interests/Interests';
+import { Datas } from '../../api/dataDensity/Datas';
 
 /* eslint-disable no-console */
 
@@ -72,6 +73,10 @@ if (Meteor.users.find().count() === 0) {
     console.log('Cannot initialize the database!  Please invoke meteor with a settings file.');
   }
 }
+function addDensity({Device, Unique, Building}) {
+  console.log(`defining occupancy ${Device}`);
+  Datas.collection.insert({Device, Unique, Building});
+}
 
 /**
  * If the loadAssetsFile field in settings.development.json is true, then load the data in private/data.json.
@@ -86,5 +91,6 @@ if ((Meteor.settings.loadAssetsFile) && (Meteor.users.find().count() < 7)) {
   console.log(`Loading data from private/${assetsFileName}`);
   // eslint-disable-next-line no-unused-vars
   const jsonData = JSON.parse(Assets.getText(assetsFileName));
-  jsonData.densityData.map(densityData => addData(densityData));
+  jsonData.density.map(densityData => addDensity(densityData));
 }
+
