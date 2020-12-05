@@ -1,7 +1,7 @@
 import { Mongo } from 'meteor/mongo';
 import SimpleSchema from 'simpl-schema';
 import { Tracker } from 'meteor/tracker';
-
+/** I was not sure on what was the use of index, and I renamed the prop names used in schema to match the prop names used in the data set. **/
 /** Encapsulates state and variable values for this collection. */
 class DatasCollection {
   constructor() {
