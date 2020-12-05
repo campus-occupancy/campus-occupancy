@@ -42,7 +42,6 @@ function addProfile({ firstName, lastName, bio, title, interests, projects, pict
 function addData({ firstName, lastName, bio, title, interests, projects, picture, email, role }) {
   console.log(`Defining data ${email}`);
   // Define the user in the Meteor accounts package.
-  createUser(email, role);
   // Create the profile.
   Profiles.collection.insert({ firstName, lastName, bio, title, picture, email });
   // Add interests and projects.
