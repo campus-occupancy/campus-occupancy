@@ -1,5 +1,6 @@
 /* PLAN TO ADD STUFF HERE */
 import React, { useState, useEffect } from 'react';
+import './CovidSliderstyle.css';
 import LoadBuildingsTask from '../../../tasks/LoadBuildingsTask';
 import CovidMap from './CovidMap';
 import Legend from './Legend';
@@ -21,9 +22,11 @@ const Covid19 = () => {
   return (
       <div>
         {buildings.length === 0 ? <Loading/> : <div>
+          <div className='container'>
+            <div className="text-block"><CovidSlider/></div>
+          </div>
           <CovidMap/>
-          <Legend legendItems = {legendItemsInReverse} />
-           <CovidSlider/>
+          <Legend legendItems={legendItemsInReverse}/>
         </div>
         }
       </div>);

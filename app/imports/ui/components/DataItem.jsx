@@ -11,9 +11,6 @@ class DataItem extends React.Component {
           <Table.Cell>{this.props.data.dateTime}</Table.Cell>
           <Table.Cell>{this.props.data.Unique}</Table.Cell>
           <Table.Cell>{this.props.data.Building}</Table.Cell>
-          <Table.Cell>
-            <Link to={`/edit/${this.props.data._id}`}>Edit</Link>
-          </Table.Cell>
         </Table.Row>
     );
   }
