@@ -35,38 +35,19 @@ const DataTable = (props) => (
       <Table.Body>
         <Table.Row>
         {_.map(props.data.dateTime,
-            (dateTime, index) => <Table.Cell> {dateTime} </Table.Cell>)}
+            (dateTime) => <Table.Cell> {dateTime} </Table.Cell>)}
         </Table.Row>
 
         <Table.Row>
-          {_.map(props.data.building,
-              (dateTime, index) => <Table.Cell> {building} </Table.Cell>)}
+          {_.map(props.data.Building,
+              (Building) => <Table.Cell> {Building} </Table.Cell>)}
         </Table.Row>
 
         <Table.Row>
-          {_.map(props.data.occupancy,
-              (dateTime, index) => <Table.Cell> {occupancy} </Table.Cell>)}
+          {_.map(props.data.Unique,
+              (Unique) => <Table.Cell> {Unique} </Table.Cell>)}
         </Table.Row>
       </Table.Body>
-
-      <Table.Footer>
-        <Table.Row>
-          <Table.HeaderCell colSpan='3'>
-            <Menu floated='right' pagination>
-              <Menu.Item as='a' icon>
-                <Icon name='chevron left' />
-              </Menu.Item>
-              <Menu.Item as='a'>1</Menu.Item>
-              <Menu.Item as='a'>2</Menu.Item>
-              <Menu.Item as='a'>3</Menu.Item>
-              <Menu.Item as='a'>4</Menu.Item>
-              <Menu.Item as='a' icon>
-                <Icon name='chevron right' />
-              </Menu.Item>
-            </Menu>
-          </Table.HeaderCell>
-        </Table.Row>
-      </Table.Footer>
     </Table>
 );
 
@@ -88,9 +69,7 @@ class DatasPage extends React.Component {
     const profileData = times.map(dateTime => getProfileData(dateTime));
     return (
       <Container id="profiles-page">
-        <Card.Group>
           {_.map(profileData, (data, index) => <DataTable key={index} data={data}/>)}
-        </Card.Group>
       </Container>
     );
   }
