@@ -39,7 +39,6 @@ function addProfile({ firstName, lastName, bio, title, interests, projects, pict
   interests.map(interest => addInterest(interest));
 }
 
-
 /** Define a new project. Error if project already exists.  */
 function addProject({ name, homepage, description, interests, picture }) {
   console.log(`Defining project ${name}`);
@@ -63,7 +62,7 @@ if (Meteor.users.find().count() === 0) {
 
 /** Defines a new user and associated profile. Error if user already exists. */
 function addData({ dateTime, Unique, Building }) {
-  console.log(`Defining data ${dateTime}`);
+  console.log(`Defining data ${Building}`);
   // Define the user in the Meteor accounts package.
   // Create the profile.
   Datas.collection.insert({ dateTime, Unique, Building });

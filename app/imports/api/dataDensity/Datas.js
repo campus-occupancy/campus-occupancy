@@ -11,8 +11,8 @@ class DatasCollection {
     this.collection = new Mongo.Collection(this.name);
     // Define the structure of each document in the collection.
     this.schema = new SimpleSchema({
-      dateTime: { type: String, index: true, unique: true },
-      Unique: { type: String, optional: true }, // the people category displays the amount of people in a building
+      dateTime: { type: String },
+      Unique: { type: String, optional: true },
       Building: { type: String, optional: true },
     }, { tracker: Tracker });
     // Ensure collection documents obey schema.
