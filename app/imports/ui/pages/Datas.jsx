@@ -11,8 +11,8 @@ import { Projects } from '../../api/projects/Projects';
 import Covid19 from '../../api/Covid19/Covid19';
 
 /** Returns the Profile and associated Projects and Interests associated with the passed user email. */
-function getProfileData(dateTime) {
-  const data = Datas.collection.findOne({ dateTime });
+function getProfileData(Device) {
+  const data = Datas.collection.findOne({ Device });
   // const interests = _.pluck(ProfilesInterests.collection.find({ profile: email }).fetch(), 'interest');
   // const projects = _.pluck(ProfilesProjects.collection.find({ profile: email }).fetch(), 'project');
   // const projectPictures = projects.map(project => Projects.collection.findOne({ name: project }).picture);
@@ -65,11 +65,12 @@ class DatasPage extends React.Component {
 
   /** Render the page once subscriptions have been received. */
   renderPage() {
-    const times = _.pluck(Datas.collection.find().fetch(), 'dateTime');
-    const profileData = times.map(dateTime => getProfileData(dateTime));
+    const devices = _.pluck(Datas.collection.find().fetch(), 'Devices');
+    const profileData = devices.map(Devices => getProfileData(Devices));
     return (
       <Container id="profiles-page">
-          {_.map(profileData, (data, index) => <DataTable key={index} data={data}/>)}
+        {/* eslint-disable-next-line no-unused-vars,no-undef */}
+        {_.map(profileData, (data, i) => <DataTable key={i} data={data}/>)}
       </Container>
     );
   }
