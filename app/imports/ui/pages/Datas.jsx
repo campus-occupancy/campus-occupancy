@@ -35,17 +35,17 @@ const DataTable = (props) => (
       <Table.Body>
         <Table.Row>
         {_.map(props.data.dateTime,
-            (dateTime, index) => <Table.Cell> {dateTime} </Table.Cell>)}
+            (dateTime) => <Table.Cell> {dateTime} </Table.Cell>)}
         </Table.Row>
 
         <Table.Row>
-          {_.map(props.data.building,
-              (dateTime, index) => <Table.Cell> {building} </Table.Cell>)}
+          {_.map(props.data.Building,
+              (Building) => <Table.Cell> {Building} </Table.Cell>)}
         </Table.Row>
 
         <Table.Row>
-          {_.map(props.data.occupancy,
-              (dateTime, index) => <Table.Cell> {occupancy} </Table.Cell>)}
+          {_.map(props.data.Unique,
+              (Unique) => <Table.Cell> {Unique} </Table.Cell>)}
         </Table.Row>
       </Table.Body>
 

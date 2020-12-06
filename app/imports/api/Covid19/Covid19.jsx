@@ -23,7 +23,7 @@ const Covid19 = () => {
         {buildings.length === 0 ? <Loading/> : <div>
           <CovidMap/>
           <Legend legendItems = {legendItemsInReverse} />
-          <CovidSlider/>
+           <CovidSlider/>
         </div>
         }
       </div>);

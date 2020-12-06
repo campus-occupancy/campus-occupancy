@@ -12,8 +12,8 @@ class DatasCollection {
     // Define the structure of each document in the collection.
     this.schema = new SimpleSchema({
       dateTime: { type: String, index: true, unique: true },
-      occupancy: { type: String, optional: true }, // the people category displays the amount of people in a building
-      building: { type: String, optional: true },
+      Unique: { type: String, optional: true }, // the people category displays the amount of people in a building
+      Building: { type: String, optional: true },
     }, { tracker: Tracker });
     // Ensure collection documents obey schema.
     this.collection.attachSchema(this.schema);
