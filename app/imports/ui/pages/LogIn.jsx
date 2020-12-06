@@ -44,9 +44,9 @@ export default class LogIn extends React.Component {
     return (
         <div style={ {
           height: '550px',
-          'background-color': 'beige',
-          'padding-top': '10vh',
-          'padding-bottom': '10vh',
+          backgroundColor: 'beige',
+          paddingTop: '10vh',
+          paddingBottom: '10vh',
         } }>
           <Container id="signin-page">
           <Grid textAlign="center" verticalAlign="middle" centered columns={2}>

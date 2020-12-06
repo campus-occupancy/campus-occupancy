@@ -19,6 +19,7 @@ import LogIn from '../pages/LogIn';
 import Data from '../pages/Data';
 import EditDataPage from '../pages/EditDataPage';
 import CampusNavBar from '../components/CampusNavBar';
+import Datas from '../pages/Datas';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -34,7 +35,7 @@ class App extends React.Component {
               <Route path="/profiles" component={Profiles}/>
               <Route path="/projects" component={Projects}/>
               <Route path="/interests" component={Interests}/>
-              <Route path="/data" component={Data}/>
+              <Route path="/data" component={Datas}/>
               <Route path="/edit" component={EditDataPage}/>
               <ProtectedRoute path="/addproject" component={AddProject}/>
               <ProtectedRoute path="/filter" component={Filter}/>
