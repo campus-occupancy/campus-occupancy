@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 import Slider from '@material-ui/core/Slider';
 import Tooltip from '@material-ui/core/Tooltip';
+// eslint-disable-next-line no-unused-vars
 import { Map, GeoJSON, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
+// eslint-disable-next-line no-unused-vars
 import datas from '../../../data/campusmap.json';
 
 const useStyles = makeStyles((theme) => ({

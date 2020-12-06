@@ -16,7 +16,6 @@ import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
 import LandingPage from '../pages/Landing-page';
 import LogIn from '../pages/LogIn';
-import Data from '../pages/Data';
 import EditDataPage from '../pages/EditDataPage';
 import CampusNavBar from '../components/CampusNavBar';
 import Datas from '../pages/Datas';

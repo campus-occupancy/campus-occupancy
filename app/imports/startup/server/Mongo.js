@@ -1,17 +1,11 @@
 import { Meteor } from 'meteor/meteor';
 import { Accounts } from 'meteor/accounts-base';
 import { Roles } from 'meteor/alanning:roles';
-import { Projects } from '../../api/projects/Projects';
-import { ProjectsInterests } from '../../api/projects/ProjectsInterests';
-import { Profiles } from '../../api/profiles/Profiles';
 import { Datas } from '../../api/dataDensity/Datas';
-import { ProfilesProjects } from '../../api/profiles/ProfilesProjects';
-import { ProfilesInterests } from '../../api/profiles/ProfilesInterests';
-import { Interests } from '../../api/interests/Interests';
-
 /* eslint-disable no-console */
 
 /** Define a user in the Meteor accounts package. This enables login. Username is the email address. */
+// eslint-disable-next-line no-unused-vars
 function createUser(email, role) {
   const userID = Accounts.createUser({ username: email, email, password: 'foo' });
   if (role === 'admin') {
