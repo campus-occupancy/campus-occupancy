@@ -87,5 +87,5 @@ if ((Meteor.settings.loadAssetsFile) && (Meteor.users.find().count() < 7)) {
   console.log(`Loading data from private/${assetsFileName}`);
   // eslint-disable-next-line no-unused-vars
   const jsonData = JSON.parse(Assets.getText(assetsFileName));
-  jsonData.densityData.map(densityData => addData(densityData));
+  jsonData.densityData.map(data => addData(data));
 }
