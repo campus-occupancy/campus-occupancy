@@ -74,10 +74,10 @@ if (Meteor.users.find().count() === 0) {
   }
 }
 
-/* This is the function I made to insert the datas into mongo, the log was long because printing Each device in data*/
-function addDensity({Device, Unique, Building}) {
+/* This is the function I made to insert the datas into mongo, the log was long because printing Each device in data */
+function addDensity({ Device, Unique, Building }) {
   console.log(`defining occupancy ${Device}`);
-  Datas.collection.insert({Device, Unique, Building});
+  Datas.collection.insert({ Device, Unique, Building });
 }
 
 /**
@@ -95,4 +95,3 @@ if ((Meteor.settings.loadAssetsFile) && (Meteor.users.find().count() < 7)) {
   const jsonData = JSON.parse(Assets.getText(assetsFileName));
   jsonData.density.map(densityData => addDensity(densityData)); // needed to create a function to add our data into mongo
 }
-
