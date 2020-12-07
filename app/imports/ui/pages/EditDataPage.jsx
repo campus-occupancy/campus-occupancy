@@ -5,7 +5,7 @@ import { Container, Grid, Header, Button } from 'semantic-ui-react';
 class EditDataPage extends React.Component {
   render() {
     return (
-        <div id="editDatePage">
+        <div id="importDatapage">
           <div className='landing-green-background'>
             <Container textAlign='center'>
               <Header style={{ paddingTop: '20px', color: 'white', fontSize: '36pt' }} as='h1'>
