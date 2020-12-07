@@ -1,0 +1,22 @@
+.container {
+  width: auto !important;
+  position: relative;
+}
+
+.text-block {
+  background-color: white;
+  position: absolute;
+  top: 71px;
+  padding-right: inherit;
+  padding-left: inherit;
+  z-index: 999;
+  right: -109px;
+  box-shadow:
+      0 1px 2.1px -4px rgba(0, 0, 0, 0.042),
+      0 2.3px 5.1px -4px rgba(0, 0, 0, 0.061),
+      0 4.4px 9.6px -4px rgba(0, 0, 0, 0.075),
+      0 7.8px 17.2px -4px rgba(0, 0, 0, 0.089),
+      0 14.6px 32.2px -4px rgba(0, 0, 0, 0.108),
+      0 35px 77px -4px rgba(0, 0, 0, 0.15)
+;
+}
