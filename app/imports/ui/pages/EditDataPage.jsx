@@ -1,6 +1,8 @@
 import React from 'react';
-import { Container, Grid, Header, Button } from 'semantic-ui-react';
+import { Container, Grid, Header, Button, Segment } from 'semantic-ui-react';
 import Papa from 'papaparse';
+import swal from 'sweetalert';
+import { _ } from 'meteor/underscore';
 import { Datas } from '../../api/dataDensity/Datas';
 
 
@@ -18,7 +20,6 @@ class EditDataPage extends React.Component {
     this.setState({
       csvfile: event.target.files[0],
     });
-    console.log(this.state);
   };
 
   importCSV = () => {
@@ -27,12 +28,20 @@ class EditDataPage extends React.Component {
       complete: this.updateData,
       header: true,
     });
+    if (this.state) {
+      swal('File was Succesfully Imported.');
+    }
+    if (this.state === null) {
+      swal('Err.');
+
+    }
+
   };
 
   updateData(result) {
     const data = result.data;
-    console.log(data);
     data.map(nums => Datas.insert(nums));
+
   }
 
   render() {
@@ -54,10 +63,11 @@ class EditDataPage extends React.Component {
                 <Button color='black' as="label" htmlFor="file" type="button">
                   Upload
                 </Button>
-                <input type="file" id="file" ref={input => {
+                <Segment><input type="file" id="file" ref={input => {
                   this.filesInput = input;
                 }}style={{ display: 'hidden' }} onChange={this.handleChange} />
-                <Button onClick={this.importCSV}>Import Now!</Button>
+                <Button color='black' onClick={this.importCSV}>Import Now!</Button>
+                </Segment>
               </Grid.Column>
               <Grid.Column>
                 <Button color='black'>Generate Map</Button>
