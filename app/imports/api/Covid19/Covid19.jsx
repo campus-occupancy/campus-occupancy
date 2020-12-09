@@ -9,10 +9,10 @@ import CovidSlider from './covidSlider';
 import legendItems from '../../../entities/LegendItems';
 
 const Covid19 = () => {
-  const [buildings, setBuildings] = useState([]);
+  const [buildings, setBuildings] = useState([]); // possibly have to change this line
   const legendItemsInReverse = [...legendItems].reverse();
 
-  const load = () => {
+  const load = () => { // have to change this line
     const loadBuildingsTask = new LoadBuildingsTask();
     loadBuildingsTask.load(setBuildings);
   };
