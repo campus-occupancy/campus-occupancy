@@ -1,10 +1,9 @@
 import React from 'react';
-import { Container, Grid, Header, Button, Segment } from 'semantic-ui-react';
+import { Container, Grid, Header, Button, Segment, Input } from 'semantic-ui-react';
 import Papa from 'papaparse';
 import swal from 'sweetalert';
 import { _ } from 'meteor/underscore';
 import { Datas } from '../../api/dataDensity/Datas';
-
 
 /** Renders a color-blocked static landing page. */
 class EditDataPage extends React.Component {
@@ -28,23 +27,27 @@ class EditDataPage extends React.Component {
       complete: this.updateData,
       header: true,
     });
-    if (this.state) {
-      swal('File was Succesfully Imported.');
-    }
-    if (this.state === null) {
-      swal('Err.');
-
-    }
-
   };
 
   updateData(result) {
     const data = result.data;
-    data.map(nums => Datas.insert(nums));
-
+    // pluck the required datas from the file
+    const date = _.pluck(data, 'dateTime');
+    const building = _.pluck(data, 'Building');
+    const val = _.pluck(data, 'Unique');
+    // Check if the datas from the file is valid
+    if (_.contains(date, undefined) === false &&
+        _.contains(val, undefined) === false &&
+        _.contains(building, undefined) === false) {
+      data.map(nums => Datas.insert(nums));
+      swal('The File was successfully added to the Database.');
+    } else {
+      swal('Error the file Cannot be Read. Please Input a ".cvs text file."');
+    }
   }
 
   render() {
+    console.log(_.pluck(Datas.find().fetch(), 'dateTime'));
     return (
         <div id="editDatePage">
           <div className='landing-green-background'>
@@ -60,13 +63,12 @@ class EditDataPage extends React.Component {
           <div className={['background-landing-page']}>
             <Grid container stackable columns={2} textAlign='center'>
               <Grid.Column>
-                <Button color='black' as="label" htmlFor="file" type="button">
-                  Upload
-                </Button>
-                <Segment><input type="file" id="file" ref={input => {
+                <Segment>
+                  <Container><Input size='large' fluid type="file" id="file" ref={input => {
                   this.filesInput = input;
-                }}style={{ display: 'hidden' }} onChange={this.handleChange} />
-                <Button color='black' onClick={this.importCSV}>Import Now!</Button>
+                }}style={{ display: 'hidden' }} onChange={this.handleChange}/>
+                <Button color='black' onClick={this.importCSV}>Import Data</Button>
+                  </Container>
                 </Segment>
               </Grid.Column>
               <Grid.Column>

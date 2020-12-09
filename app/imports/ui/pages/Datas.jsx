@@ -49,7 +49,6 @@ class ListData extends React.Component {
       },
     };
     const { currentSort } = this.state;
-    console.log(this.state);
     return (
         <Container>
           <div><Covid19/></div>
