@@ -17,8 +17,6 @@ class LoadBuildingsTask {
 
   covid19DataUrl = 'https://raw.githubusercontent.com/HACC2020/data/main/uh_occupancy/2020-0824_1200pm-259pm_devices_1598317333.csv';
 
-
-
   setState = null;
 
  load = (setState) => {
