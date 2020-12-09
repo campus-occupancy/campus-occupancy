@@ -29,214 +29,690 @@
   ],
   "densityData": [
     {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Hamilton P2 508",
-      "Max": 0,
-      "Unique": 0,
-      "Building": "Hamilton Library"
-    },
-    {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Hamilton P2 014 Ewa",
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "AFROTC Portables",
+      "Device": "AFROTC",
       "Max": 1,
-      "Unique": 3,
-      "Building": "Hamilton Library"
+      "Unique": 3
     },
     {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Hamilton 4th Fl Asia 20",
-      "Max": 0,
-      "Unique": 0,
-      "Building": "Hamilton Library"
-    },
-    {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Hamilton P1 002K",
-      "Max": 0,
-      "Unique": 0,
-      "Building": "Hamilton Library"
-    },
-    {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Hamilton P2 112",
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Admin Services/Bookstore Warehouse",
+      "Device": "Admin Services 2 BET",
       "Max": 1,
-      "Unique": 10,
-      "Building": "Hamilton Library"
+      "Unique": 7
     },
     {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Hamilton P2 3rdFl-Freight Elevator",
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Ag. Engineering",
+      "Device": "AgEngineering 122 Ewa",
       "Max": 0,
-      "Unique": 0,
-      "Building": "Hamilton Library"
+      "Unique": 11
     },
     {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Hamilton P2 026",
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Ag. Science",
+      "Device": "AgSci 220 Makai Ewa",
+      "Max": 0,
+      "Unique": 44
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Anuenue",
+      "Device": "Anuenue Front Desk",
+      "Max": 0,
+      "Unique": 9
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Architecture Bldg",
+      "Device": "Architecture 205B Makai Ewa",
+      "Max": 0,
+      "Unique": 10
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Architecture-Hawaii Hall Outdoor Lawn",
+      "Device": "Crawford ECB Outdoor",
+      "Max": 0,
+      "Unique": 5
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Army ROTC Portables",
+      "Device": "Makai Campus 11-1D (Army ROTC)",
       "Max": 1,
-      "Unique": 4,
-      "Building": "Hamilton Library"
+      "Unique": 6
     },
     {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Hamilton P2 306 DH",
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Art",
+      "Device": "Art 363",
+      "Max": 0,
+      "Unique": 35
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Athletics",
+      "Device": "Athletics 247",
+      "Max": 0,
+      "Unique": 151
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Auxiliary Services",
+      "Device": "Auxilliary Svcs 102",
       "Max": 1,
-      "Unique": 1,
-      "Building": "Hamilton Library"
+      "Unique": 3
     },
     {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Hamilton 4th Fl Asia 16",
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Bachman Hall",
+      "Device": "Bachman Annex 13 Rm 9",
       "Max": 0,
-      "Unique": 0,
-      "Building": "Hamilton Library"
+      "Unique": 21
     },
     {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Hamilton P2 159 Mauka",
-      "Max": 10,
-      "Unique": 33,
-      "Building": "Hamilton Library"
-    },
-    {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Hamilton 4th Fl Asia 34",
-      "Max": 0,
-      "Unique": 0,
-      "Building": "Hamilton Library"
-    },
-    {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Hamilton P1 101 Hallway",
-      "Max": 4,
-      "Unique": 68,
-      "Building": "Hamilton Library"
-    },
-    {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Hamilton P2 217 Hallway",
-      "Max": 0,
-      "Unique": 0,
-      "Building": "Hamilton Library"
-    },
-    {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Hamilton P2 008 DH",
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Bilger Addition",
+      "Device": "Bilger Addition 407 Hallway",
       "Max": 1,
-      "Unique": 1,
-      "Building": "Hamilton Library"
+      "Unique": 40
     },
     {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Hamilton P1 159 Makai",
-      "Max": 16,
-      "Unique": 32,
-      "Building": "Hamilton Library"
-    },
-    {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Hamilton P1 003 Makai",
-      "Max": 1,
-      "Unique": 3,
-      "Building": "Hamilton Library"
-    },
-    {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Hamilton P1 006A GovDocs",
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Bilger Hall",
+      "Device": "Bilger Hall 104",
       "Max": 0,
-      "Unique": 0,
-      "Building": "Hamilton Library"
+      "Unique": 17
     },
     {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Hamilton P2 008 Ewa",
-      "Max": 4,
-      "Unique": 9,
-      "Building": "Hamilton Library"
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Biomed",
+      "Device": "Biomed T309A",
+      "Max": 3,
+      "Unique": 37
     },
     {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Hamilton P2 123",
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Building 171F",
+      "Device": "LowerCampus171F-123 Hallway",
+      "Max": 0,
+      "Unique": 6
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "C-MORE",
+      "Device": "C-MORE 109 Hallway",
+      "Max": 1,
+      "Unique": 13
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Campus Center",
+      "Device": "Campus Center 117-Game Room",
+      "Max": 7,
+      "Unique": 34
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Campus Security",
+      "Device": "Pamoa A-2",
+      "Max": 3,
+      "Unique": 10
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Ching",
+      "Device": "Ching 109A Hallway",
+      "Max": 1,
+      "Unique": 26
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "College Hill",
+      "Device": "College Hill Cottage",
       "Max": 2,
-      "Unique": 11,
-      "Building": "Hamilton Library"
+      "Unique": 2
     },
     {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Hamilton P1 006 Ewa",
-      "Max": 1,
-      "Unique": 2,
-      "Building": "Hamilton Library"
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Crawford Hall",
+      "Device": "Crawford 322",
+      "Max": 2,
+      "Unique": 14
     },
     {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Spalding 258A",
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Dance Studio",
+      "Device": "Dance Studio Classroom",
+      "Max": 2,
+      "Unique": 5
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Dean Hall",
+      "Device": "Dean Hall RM 9A",
+      "Max": 2,
+      "Unique": 8
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Dole St. Offices",
+      "Device": "Dole St. Ofc. 24",
       "Max": 0,
-      "Unique": 0,
-      "Building": "Spalding Hall"
+      "Unique": 3
     },
     {
-      "dateTime": "2020-0824_300pm-559pm",
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Edmondson Hall",
+      "Device": "Edmondson 203",
+      "Max": 2,
+      "Unique": 14
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Entrance Kiosks",
+      "Device": "Parking Kiosk Maile Way",
+      "Max": 0,
+      "Unique": 7
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Environmental Health & Safety Office",
+      "Device": "EHSO Ewa Trailer",
+      "Max": 1,
+      "Unique": 3
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Everly",
+      "Device": "Everly 221",
+      "Max": 0,
+      "Unique": 3
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Frear",
+      "Device": "Frear D 807C Temp",
+      "Max": 1,
+      "Unique": 429
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Gartley Hall",
+      "Device": "Gartley 001",
+      "Max": 1,
+      "Unique": 4
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Gateway",
+      "Device": "Gateway DH 407",
+      "Max": 4,
+      "Unique": 136
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "George Hall",
+      "Device": "George 215",
+      "Max": 0,
+      "Unique": 2
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Gilmore",
+      "Device": "Gilmore 202",
+      "Max": 1,
+      "Unique": 3
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "HIG",
+      "Device": "HIG 321",
+      "Max": 3,
+      "Unique": 25
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Hale Aloha Cafe",
+      "Device": "Hale Aloha-Cafeteria DH",
+      "Max": 0,
+      "Unique": 8
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Hale Kahawai",
+      "Device": "Kahawai 318",
+      "Max": 5,
+      "Unique": 72
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Hale Laulima",
+      "Device": "Laulima 221",
+      "Max": 0,
+      "Unique": 58
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Hamilton Library",
+      "Device": "Hamilton P3 553C",
+      "Max": 1,
+      "Unique": 59
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Hawaii Hall",
+      "Device": "Hawaii Hall 130 Hallway",
+      "Max": 0,
+      "Unique": 13
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Hawaiian Studies (Kamakakuokalani)",
+      "Device": "Kamakakuokalani 211",
+      "Max": 1,
+      "Unique": 1
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Hemenway Hall",
+      "Device": "Hemenway 212A",
+      "Max": 2,
+      "Unique": 16
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Holmes Hall",
+      "Device": "Holmes 458 Hallway",
+      "Max": 5,
+      "Unique": 91
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "ITC",
+      "Device": "ITC 501K",
+      "Max": 3,
+      "Unique": 30
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Ilima",
+      "Device": "Ilima 626",
+      "Max": 4,
+      "Unique": 191
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Johnson",
+      "Device": "Johnson Hall B 236",
+      "Max": 8,
+      "Unique": 123
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "KHET Building",
+      "Device": "KHET M2 Hallway",
+      "Max": 1,
+      "Unique": 1
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Kahanamoku Pool",
+      "Device": "Kahanamoku Pool B206",
+      "Max": 1,
+      "Unique": 8
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Keller",
+      "Device": "Keller 313",
+      "Max": 0,
+      "Unique": 13
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Kennedy",
+      "Device": "Kennedy Mezzanine",
+      "Max": 1,
+      "Unique": 16
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Klum Gym",
+      "Device": "Klum Gym Makai",
+      "Max": 0,
+      "Unique": 1
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Krauss",
+      "Device": "Krauss Annex U Rm 1",
+      "Max": 0,
+      "Unique": 32
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Kuykendall",
+      "Device": "Kuykendall BET Outdoor",
+      "Max": 1,
+      "Unique": 24
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Landscaping",
+      "Device": "Landscaping BET",
+      "Max": 1,
+      "Unique": 1
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Law Library",
+      "Device": "Law Library A100B",
+      "Max": 3,
+      "Unique": 16
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Law School",
+      "Device": "Law School 212",
+      "Max": 1,
+      "Unique": 35
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Lehua",
+      "Device": "Lehua 805",
+      "Max": 6,
+      "Unique": 142
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Letterwinners Portable",
+      "Device": "Letterwinners",
+      "Max": 0,
+      "Unique": 2
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Life Science Building",
+      "Device": "Life Science 209A",
+      "Max": 2,
+      "Unique": 40
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Lincoln Hall Annexes",
+      "Device": "Lincoln Annex 6",
+      "Max": 2,
+      "Unique": 3
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Lokelani",
+      "Device": "Lokelani 1206A",
+      "Max": 1,
+      "Unique": 208
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Lower Campus",
+      "Device": "LowerCampus MaintShed",
+      "Max": 2,
+      "Unique": 25
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Lunalilo Portables",
+      "Device": "Lunalilo Portable 4",
+      "Max": 0,
+      "Unique": 2
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Maile Way Annex",
+      "Device": "Maile Way 2",
+      "Max": 2,
+      "Unique": 7
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Makai Campus Portables",
+      "Device": "Makai Campus 14-1",
+      "Max": 1,
+      "Unique": 16
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Marine Science Building",
+      "Device": "MSB 626 Hallway",
+      "Max": 4,
+      "Unique": 35
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Miller Hall",
+      "Device": "Miller 103",
+      "Max": 1,
+      "Unique": 2
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Mokihana",
+      "Device": "Mokihana 880",
+      "Max": 5,
+      "Unique": 153
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Moore Hall",
+      "Device": "Moore 253",
+      "Max": 2,
+      "Unique": 49
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Murakami",
+      "Device": "Murakami 121C Academic Center",
+      "Max": 0,
+      "Unique": 3
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Music",
+      "Device": "Music Orvis Mauka",
+      "Max": 1,
+      "Unique": 3
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Na Koa Portable",
+      "Device": "Na Koa",
+      "Max": 2,
+      "Unique": 2
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Nagatani",
+      "Device": "Nagatani 16N Hallway",
+      "Max": 0,
+      "Unique": 9
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Noelani",
+      "Device": "Noelani A 107T",
+      "Max": 2,
+      "Unique": 7
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "POST",
+      "Device": "POST 207G",
+      "Max": 5,
+      "Unique": 74
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Parking Structure",
+      "Device": "Parking Structure Storage Room",
+      "Max": 2,
+      "Unique": 2
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Physical Plant",
+      "Device": "PhyPlant193-5 DH",
+      "Max": 2,
+      "Unique": 23
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Physical Science Building",
+      "Device": "PSB Ewa Exterior Makai",
+      "Max": 0,
+      "Unique": 10
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Pope Laboratory",
+      "Device": "Pope Lab 120",
+      "Max": 1,
+      "Unique": 6
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "QLCSS",
+      "Device": "QLCSS 104",
+      "Max": 0,
+      "Unique": 46
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Sakamaki",
+      "Device": "Sakamaki D103",
+      "Max": 1,
+      "Unique": 56
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Saunders Hall",
+      "Device": "Saunders 226",
+      "Max": 1,
+      "Unique": 61
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Sherman Laboratory",
+      "Device": "Sherman 101 Hallway",
+      "Max": 0,
+      "Unique": 7
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Shidler CBA",
+      "Device": "CBA G102 Makai",
+      "Max": 3,
+      "Unique": 25
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Sinclair Annexes",
+      "Device": "Sinclair Annex 1 RM 7",
+      "Max": 0,
+      "Unique": 6
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Sinclair Library",
+      "Device": "Sinclair ACM 193A",
+      "Max": 0,
+      "Unique": 29
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Softball Stadium",
+      "Device": "Softball 201 Press Box",
+      "Max": 1,
+      "Unique": 2
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Spalding Hall",
       "Device": "Spalding 258",
-      "Max": 2,
-      "Unique": 6,
-      "Building": "Spalding Hall"
-    },
-    {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Edmondson 114",
-      "Max": 4,
-      "Unique": 10,
-      "Building": "Edmondson Hall"
-    },
-    {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Edmondson 112",
-      "Max": 13,
-      "Unique": 17,
-      "Building": "Edmondson Hall"
-    },
-    {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Edmondson 111",
-      "Max": 0,
-      "Unique": 1,
-      "Building": "Edmondson Hall"
-    },
-    {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Edmondson 3rd Fl Lanai",
       "Max": 1,
-      "Unique": 16,
-      "Building": "Edmondson Hall"
+      "Unique": 8
     },
     {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Edmondson 1st Fl Lanai",
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "St. John",
+      "Device": "St John 010B",
       "Max": 4,
-      "Unique": 95,
-      "Building": "Edmondson Hall"
+      "Unique": 41
     },
     {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Edmondson 2nd Fl Lanai",
-      "Max": 2,
-      "Unique": 29,
-      "Building": "Edmondson Hall"
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Stan Sheriff Center",
+      "Device": "Stan Sheriff 139 Weight Room",
+      "Max": 19,
+      "Unique": 48
     },
     {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Edmondson 104",
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Student Health",
+      "Device": "Student Health 136 Hallway",
       "Max": 0,
-      "Unique": 2,
-      "Building": "Edmondson Hall"
+      "Unique": 10
     },
     {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Edmondson 101",
-      "Max": 10,
-      "Unique": 25,
-      "Building": "Edmondson Hall"
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Temporary Portables",
+      "Device": "Temp Portables 115",
+      "Max": 1,
+      "Unique": 9
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "UH Lab School Portables (N)",
+      "Device": "LabSchPortableN1A",
+      "Max": 0,
+      "Unique": 3
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Wainani",
+      "Device": "Wainani I 753",
+      "Max": 1,
+      "Unique": 385
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Warrior Recreational Center",
+      "Device": "RecCtr A117 Laundry Rm",
+      "Max": 6,
+      "Unique": 46
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Watanabe",
+      "Device": "Watanabe 109",
+      "Max": 4,
+      "Unique": 36
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Webster Hall",
+      "Device": "Webster 101 Makai",
+      "Max": 5,
+      "Unique": 38
+    },
+    {
+      "dateTime": "2020-0824_300am-559am",
+      "Building": "Wist Hall",
+      "Device": "Wist Hall 131",
+      "Max": 1,
+      "Unique": 19
     }
   ]
 }
