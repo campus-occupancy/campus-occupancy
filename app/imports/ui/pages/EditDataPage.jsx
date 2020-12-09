@@ -23,10 +23,14 @@ class EditDataPage extends React.Component {
 
   importCSV = () => {
     const { csvfile } = this.state;
-    Papa.parse(csvfile, {
-      complete: this.updateData,
-      header: true,
-    });
+    if (csvfile !== undefined) {
+      Papa.parse(csvfile, {
+        complete: this.updateData,
+        header: true,
+      });
+    } else {
+      swal('No File detected.');
+    }
   };
 
   updateData(result) {
@@ -67,7 +71,7 @@ class EditDataPage extends React.Component {
                   <Container><Input size='large' fluid type="file" id="file" ref={input => {
                   this.filesInput = input;
                 }}style={{ display: 'hidden' }} onChange={this.handleChange}/>
-                <Button color='black' onClick={this.importCSV}>Import Data</Button>
+                <Button color='black' onClick={this.importCSV}>Upload File</Button>
                   </Container>
                 </Segment>
               </Grid.Column>
