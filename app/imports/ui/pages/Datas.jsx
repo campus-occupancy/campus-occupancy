@@ -1,8 +1,9 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Table, Header, Loader, Icon, Button } from 'semantic-ui-react';
+import { Container, Table, Header, Loader, Icon, Button, Menu, Dropdown } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
+import { _ } from 'meteor/underscore';
 import { Datas } from '../../api/dataDensity/Datas';
 import DataItem from '../components/DataItem';
 import Covid19 from '../../api/Covid19/Covid19';
@@ -49,6 +50,7 @@ class ListData extends React.Component {
       },
     };
     const { currentSort } = this.state;
+
     return (
         <Container>
           <div><Covid19/></div>
@@ -56,7 +58,9 @@ class ListData extends React.Component {
           <Table celled>
             <Table.Header>
               <Table.Row>
-                <Table.HeaderCell>Date/Time</Table.HeaderCell>
+                <Table.HeaderCell>
+                  Date/Time
+                </Table.HeaderCell>
                 <Table.HeaderCell>
                   <Button icon labelPosition={'right'} onClick={this.onSortChange}>
                     <Icon name='sort'/>
@@ -71,7 +75,6 @@ class ListData extends React.Component {
             </Table.Body>
           </Table>
         </Container>
-
     );
   }
 }

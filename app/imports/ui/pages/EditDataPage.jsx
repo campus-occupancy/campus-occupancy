@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Grid, Header, Button, Segment, Input } from 'semantic-ui-react';
+import { Container, Grid, Header, Button, Segment, Input, Form } from 'semantic-ui-react';
 import Papa from 'papaparse';
 import swal from 'sweetalert';
 import { _ } from 'meteor/underscore';
@@ -7,51 +7,81 @@ import { Datas } from '../../api/dataDensity/Datas';
 
 /** Renders a color-blocked static landing page. */
 class EditDataPage extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      csvfile: undefined,
+      file: undefined,
     };
     this.updateData = this.updateData.bind(this);
   }
 
   handleChange = event => {
     this.setState({
-      csvfile: event.target.files[0],
+      file: event.target.files[0],
     });
   };
 
   importCSV = () => {
-    const { csvfile } = this.state;
-    if (csvfile !== undefined) {
-      Papa.parse(csvfile, {
+    const { file } = this.state;
+    if (file !== undefined) {
+      Papa.parse(file, {
         complete: this.updateData,
         header: true,
       });
     } else {
-      swal('No File detected.');
+      swal({
+        icon: 'warning',
+        text: 'Warning No File Detected.',
+        button: 'Ok',
+      });
     }
   };
 
   updateData(result) {
     const data = result.data;
-    // pluck the required datas from the file
+    // remove the extra item when uploading excel .cvs files
+    for (let i = 0; i < data.length; i++) {
+      if (data[i].Device === '') {
+        data.pop();
+      }
+    }
+    // look for undefined in data and empties
     const date = _.pluck(data, 'dateTime');
     const building = _.pluck(data, 'Building');
     const val = _.pluck(data, 'Unique');
-    // Check if the datas from the file is valid
-    if (_.contains(date, undefined) === false &&
-        _.contains(val, undefined) === false &&
-        _.contains(building, undefined) === false) {
+    const checkDate = _.contains(date, '');
+    const checkValue = _.contains(val, '');
+    const checkBuilding = _.contains(building, '');
+    const wrongDate = _.contains(date, undefined);
+    const wrongVal = _.contains(val, undefined);
+    const wrongBuilding = _.contains(building, undefined);
+    // Check if the datas from the file is valid by looking for datetime, Unique and Building
+    console.log(data.includes(undefined));
+    if (checkDate === false &&
+        wrongDate === false &&
+        wrongVal === false &&
+        wrongBuilding === false &&
+        checkValue === false &&
+        // eslint-disable-next-line no-restricted-globals
+        isNaN(val.join('')) === false &&
+        checkBuilding === false &&
+        data.includes(undefined) === false) {
       data.map(nums => Datas.insert(nums));
-      swal('The File was successfully added to the Database.');
+      swal({
+        icon: 'success',
+        text: `The File containing ${data.length} was successfully added to the Database.`,
+        button: 'Ok',
+      });
     } else {
-      swal('Error the file Cannot be Read. Please Input a ".cvs text file."');
+      swal({
+        icon: 'error',
+        text: 'Error The File Cannot be Read. ',
+        button: 'Ok',
+      });
     }
   }
 
   render() {
-    console.log(_.pluck(Datas.find().fetch(), 'dateTime'));
     return (
         <div id="editDatePage">
           <div className='landing-green-background'>
@@ -68,10 +98,19 @@ class EditDataPage extends React.Component {
             <Grid container stackable columns={2} textAlign='center'>
               <Grid.Column>
                 <Segment>
-                  <Container><Input size='large' fluid type="file" id="file" ref={input => {
-                  this.filesInput = input;
-                }}style={{ display: 'hidden' }} onChange={this.handleChange}/>
-                <Button color='black' onClick={this.importCSV}>Upload File</Button>
+                  <Container>
+                    <Form widths='equal'>
+                      <Input
+                        size='large'
+                        fluid type="file"
+                        id="file"
+                        ref={input => { this.filesInput = input; }}
+                        style={{ display: 'hidden', marginBottom: '10px' }}
+                        onChange={this.handleChange}/>
+                      <Button color='black' onClick={this.importCSV}>
+                        Upload File
+                      </Button>
+                    </Form>
                   </Container>
                 </Segment>
               </Grid.Column>
@@ -81,7 +120,6 @@ class EditDataPage extends React.Component {
             </Grid>
           </div>
         </div>
-
     );
   }
 }
