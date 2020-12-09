@@ -12,7 +12,6 @@ import { ProjectsInterests } from '../../api/projects/ProjectsInterests';
 Meteor.publish(Interests.userPublicationName, () => Interests.collection.find());
 
 /** Define a publication to publish all profiles. */
-/** This subscription publishes only the documents associated with the logged in user */
 Meteor.publish('Datas', function publish() {
   if (this.userId) {
     // const username = Meteor.users.findOne(this.userId).username;

@@ -17,10 +17,14 @@ class LoadBuildingsTask {
 
   covid19DataUrl = 'https://raw.githubusercontent.com/HACC2020/data/main/uh_occupancy/2020-0824_1200pm-259pm_devices_1598317333.csv';
 
+
+
   setState = null;
 
  load = (setState) => {
     this.setState = setState;
+    //const covid19Data = this.props.data;
+    //this.#processCovidData(covid19Data);
     papa.parse(this.covid19DataUrl, {
       download: true,
       dynamicTyping: true,
