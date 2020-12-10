@@ -66,10 +66,4 @@ class LoadBuildingsTask {
   };
 }
 
-/** Require an array of Stuff documents in the props. */
-DataItem.propTypes = {
-  data: PropTypes.object.isRequired,
-  ready: PropTypes.bool.isRequired,
-};
-
 export default (LoadBuildingsTask);

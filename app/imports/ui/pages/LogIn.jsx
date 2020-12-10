@@ -52,7 +52,7 @@ export default class LogIn extends React.Component {
           <Grid textAlign="center" verticalAlign="middle" centered columns={2}>
             <Grid.Column>
               <Form onSubmit={this.submit}>
-                <Segment raised style={{ padding: '0px', border: '4px solid black' }}>
+                <Segment raised style={{ padding: '0px', border: 'none' }}>
                   <Container text fluid textAlign='center'
                                style={{
                                  'padding-top': '20px',
@@ -60,7 +60,7 @@ export default class LogIn extends React.Component {
                                  'background-color': '#376551',
                                  'margin-bottom': '40px',
                                }}>
-                    <Header inverted as='h1'>LOGIN</Header>
+                    <Header inverted as='h1' style={{letterSpacing:'2px'}}>LOGIN</Header>
                     </Container>
                     <Form.Input
                         className='form-small'
@@ -85,9 +85,9 @@ export default class LogIn extends React.Component {
                         onChange={this.handleChange}
                     />
                     <Form.Button size='large' fluid className='form-small' id="signin-form-submit" content="Submit"/>
-                    <Message>
+                    <Message style={{backgroundColor:'#363636', border:'none'}}>
                       <Container textAlign='center' id='signup-page'>
-                        <Link to="/signup">Click here to Register</Link></Container>
+                        <Link to="/signup" style={{color:'white'}}>Don't have a Login? Click here to Register</Link></Container>
                     </Message>
                   </Segment>
               </Form>

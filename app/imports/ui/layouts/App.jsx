@@ -5,6 +5,7 @@ import 'semantic-ui-css/semantic.css';
 import { Roles } from 'meteor/alanning:roles';
 import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import Footer from '../components/Footer';
+import FooterAddition from '../components/FooterAddition';
 import Home from '../pages/Home';
 import Profiles from '../pages/Profiles';
 import AddProject from '../pages/AddProject';
@@ -18,6 +19,7 @@ import LandingPage from '../pages/Landing-page';
 import LogIn from '../pages/LogIn';
 import EditDataPage from '../pages/EditDataPage';
 import CampusNavBar from '../components/CampusNavBar';
+import NavbarAddition from '../components/NavbarAddition';
 import Datas from '../pages/Datas';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
@@ -26,8 +28,8 @@ class App extends React.Component {
     return (
       <Router>
         <div>
+          <NavbarAddition/>
           <CampusNavBar/>
-          <div style={{ paddingTop: '10px', paddingBottom: '10px' } }>
             <Switch>
               <Route exact path="/" component={LandingPage}/>
               <ProtectedRoute path="/home" component={Home}/>
@@ -43,8 +45,8 @@ class App extends React.Component {
               <ProtectedRoute path="/signout" component={Signout}/>
               <Route component={NotFound}/>
             </Switch>
-          </div>
           <Footer/>
+          <FooterAddition/>
         </div>
       </Router>
     );

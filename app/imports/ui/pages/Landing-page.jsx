@@ -1,32 +1,28 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Container, Header, Button, Icon } from 'semantic-ui-react';
+import { Container, Header, Button, Icon, Image } from 'semantic-ui-react';
 import Covid19 from '../../api/Covid19/Covid19';
+import Covid19Map from '../components/Covid19Map';
 
 /** Renders a color-blocked static landing page. */
+
 class LandingPage extends React.Component {
   render() {
+    const landingColor = { backgroundColor: 'white', paddingLeft: '50px', paddingTop: '20px', paddingBottom: '20px' };
     return (
         <div id="landing-page">
-          <div className='landing-green-background'>
+          <div style={landingColor}>
             <Container textAlign='center'>
-              <Header style={{ paddingTop: '20px', color: 'white', fontSize: '36pt' }} as='h1'>
+              <Header style={{ paddingTop: '15px', color: '#376551', fontSize: '30pt', letterSpacing: '2px' }}
+                      as='h1'><Image src="images/manoaseal_transparent.png" style={{ width: '75px' }}/>
                 University of Hawaii Campus Occupancy
               </Header>
-              <Header style={{ paddingBottom: '20px', color: 'white' }} as='h3'>
+              <div style={{ paddingBottom: '10px', color: '#376551', fontWeight: '500', letterSpacing: '2px' }}>
                 Log in to Access Data Visualization
-              </Header>
-              <Button id='login-button' inverted style={{ marginBottom: '20px' }} size='huge' as={NavLink} exact to="/signin" animated>
-                <Button.Content visible>
-                  Log In
-                </Button.Content>
-                <Button.Content hidden>
-                  <Icon name='arrow right'/>
-                </Button.Content>
-              </Button>
+              </div>
             </Container>
           </div>
-          <div><Covid19/></div>
+          <div><Covid19Map/></div>
         </div>
     );
   }

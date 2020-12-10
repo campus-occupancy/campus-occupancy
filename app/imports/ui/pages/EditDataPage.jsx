@@ -1,19 +1,20 @@
 import React from 'react';
-import { Container, Grid, Header, Button } from 'semantic-ui-react';
+import { Container, Grid, Header, Button, Image } from 'semantic-ui-react';
 
 /** Renders a color-blocked static landing page. */
 class EditDataPage extends React.Component {
   render() {
+    const landingColor = { backgroundColor: "white", paddingLeft: "50px", paddingTop: "20px", paddingBottom: "20px" };
     return (
         <div id="importDatapage">
-          <div className='landing-green-background'>
+          <div style={landingColor}>
             <Container textAlign='center'>
-              <Header style={{ paddingTop: '20px', color: 'white', fontSize: '36pt' }} as='h1'>
+              <Header style={{ paddingTop: '15px', color: '#376551', fontSize: '30pt', letterSpacing:'2px' }} as='h1'><Image  src="images/manoaseal_transparent.png" style={{width:'75px'}}/>
                 University of Hawaii Campus Occupancy
               </Header>
-              <Header style={{ paddingBottom: '20px', color: 'white' }} as='h3'>
+              <div style={{ paddingBottom: '20px', color: '#376551', fontWeight:"500", letterSpacing:'2px' }}>
                 Upload JSON or .csv file to Generate Map
-              </Header>
+              </div>
             </Container>
           </div>
           <div className={['background-landing-page']}>

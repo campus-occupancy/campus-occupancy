@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import { Datas } from '../../api/dataDensity/Datas';
 import DataItem from '../components/DataItem';
 import Covid19 from '../../api/Covid19/Covid19';
+import Covid19Map from '../components/Covid19Map';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class ListData extends React.Component {
@@ -19,7 +20,7 @@ class ListData extends React.Component {
   renderPage() {
     return (
         <Container>
-          <div><Covid19/></div>
+          <div><Covid19Map/></div>
           <Header as="h2" textAlign="center">Occupancy Data</Header>
           <Table celled>
             <Table.Header>
@@ -46,7 +47,7 @@ ListData.propTypes = {
 
 /** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
 export default withTracker(() => {
-  // Get access to Stuff documents.
+  // Get access to Data documents.
   const subscription = Meteor.subscribe('Datas');
   return {
     datas: Datas.find({}).fetch(),

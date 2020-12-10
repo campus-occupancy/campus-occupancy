@@ -57,7 +57,7 @@ class Signup extends React.Component {
             <Grid textAlign="center" verticalAlign="middle" centered columns={2}>
               <Grid.Column padded>
                 <Form onSubmit={this.submit}>
-                  <Segment raised style={{ padding: '0px', border: '4px solid black' }}>
+                  <Segment raised style={{ padding: '0px',  }}>
                     <Container text fluid textAlign='center'
                                style={{
                                  'padding-top': '20px',
@@ -92,8 +92,8 @@ class Signup extends React.Component {
                         onChange={this.handleChange}
                     />
                     <Form.Button size='large' fluid className='form-small' id="signup-form-submit" content="Submit"/>
-                    <Message>
-                      Already have an account? Login <Link to="/signin">here</Link>
+                    <Message style={{backgroundColor:'#363636', border:'none'}}>
+                       <Link to="/signin" style={{color:'white'}}>Already have an account? Login here</Link>
                     </Message>
                   </Segment>
                 </Form>
