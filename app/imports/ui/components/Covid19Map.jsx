@@ -13,9 +13,8 @@ import CovidMap from '../../api/Covid19/CovidMap';
 import Legend from '../../api/Covid19/Legend';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
-class Covid19Map extends React.Component {
+ class Covid19Map extends React.Component {
 
-  /** If the subscription(s) have been received, render the page, otherwise show a loading icon. */
   render() {
     return (this.props.ready) ? this.renderPage() : <Loader>Getting data</Loader>;
   }
@@ -62,7 +61,6 @@ class Covid19Map extends React.Component {
     useEffect(load, []);
   };
 
-  /** Render the page once subscriptions have been received. */
   renderPage() {
     const legendItemsInReverse = [...legendItems].reverse();
     const [buildings, setBuildings] = useState([]); // possibly have to change this line

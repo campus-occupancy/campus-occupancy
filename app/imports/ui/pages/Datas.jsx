@@ -19,7 +19,7 @@ class ListData extends React.Component {
   renderPage() {
     return (
         <Container>
-          <div><Covid19Map/></div>
+          <div><Covid19/></div>
           <Header as="h2" textAlign="center">Occupancy Data</Header>
           <Table celled>
             <Table.Header>

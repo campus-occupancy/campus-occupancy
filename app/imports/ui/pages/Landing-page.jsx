@@ -22,7 +22,7 @@ class LandingPage extends React.Component {
               </div>
             </Container>
           </div>
-          <div><Covid19Map/></div>
+          <div><Covid19/></div>
         </div>
     );
   }
