@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Table, Header, Loader } from 'semantic-ui-react';
+import { Loader } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { Datas } from '../../api/dataDensity/Datas';
-import DataItem from '../components/DataItem';
-import Covid19 from '../../api/Covid19/Covid19';
 import { features } from '../../../data/campusmap.json';
 import legendItems from '../../../entities/LegendItems';
 import LoadBuildingsTask from '../../../tasks/LoadBuildingsTask';

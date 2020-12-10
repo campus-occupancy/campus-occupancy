@@ -1,6 +1,5 @@
 import { Meteor } from 'meteor/meteor';
 import { Interests } from '../../api/interests/Interests';
-import { Profiles } from '../../api/profiles/Profiles';
 import { Datas } from '../../api/dataDensity/Datas';
 import { ProfilesInterests } from '../../api/profiles/ProfilesInterests';
 import { ProfilesProjects } from '../../api/profiles/ProfilesProjects';
@@ -14,7 +13,7 @@ Meteor.publish(Interests.userPublicationName, () => Interests.collection.find())
 /** This subscription publishes only the documents associated with the logged in user */
 Meteor.publish('Datas', function publish() {
   if (this.userId) {
-    //const username = Meteor.users.findOne(this.userId).username;
+    // const username = Meteor.users.findOne(this.userId).username;
     return Datas.find();
   }
   return this.ready();

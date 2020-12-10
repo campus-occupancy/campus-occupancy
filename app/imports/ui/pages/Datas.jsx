@@ -5,7 +5,6 @@ import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { Datas } from '../../api/dataDensity/Datas';
 import DataItem from '../components/DataItem';
-import Covid19 from '../../api/Covid19/Covid19';
 import Covid19Map from '../components/Covid19Map';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */

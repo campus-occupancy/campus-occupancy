@@ -1,15 +1,13 @@
 import React from 'react';
-import { Container, Divider, Grid, Icon, Image, Segment } from 'semantic-ui-react';
-
+import { Container, Grid, Image, Segment } from 'semantic-ui-react';
 
 /** The Footer appears at the bottom of every page. Rendered by the App Layout component. */
 class Footer extends React.Component {
   render() {
-    const header = { fontSize: "14px", color: "white", paddingBottom: "5px", letterspacing:"3px"};
-    const footercolor = { backgroundColor: "#363636", paddingLeft: "50px", paddingTop: "50px", paddingBottom: "50px" };
-    const footercolor2 = { backgroundColor: "#363636", border: "none", boxShadow:"none"};
-    const marginFix = { marginRight: "1px" };
-    const columnpicAdjust = {paddingLeft: "70px"};
+    const header = { fontSize: '14px', color: 'white', paddingBottom: '5px', letterspacing: '3px' };
+    const footercolor = { backgroundColor: '#363636', paddingLeft: '50px', paddingTop: '50px', paddingBottom: '50px' };
+    const footercolor2 = { backgroundColor: '#363636', border: 'none', boxShadow: 'none' };
+    const columnpicAdjust = { paddingLeft: '70px' };
     return (
         <div>
           <Container textAlign="left" style={footercolor}>
@@ -49,9 +47,8 @@ class Footer extends React.Component {
               </Segment>
           </Container>
         </div>
-  )
-    ;
-  }
+  );
+}
 }
 
 export default Footer;
