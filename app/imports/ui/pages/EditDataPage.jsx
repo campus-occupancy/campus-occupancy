@@ -38,7 +38,8 @@ class EditDataPage extends React.Component {
   };
 
   updateData(result) {
-    const data = result.data;
+    // will only take first 300 datas
+    const data = _.first(result.data, 300);
     // remove the extra item when uploading excel .cvs files
     for (let i = 0; i < data.length; i++) {
       if (data[i].Device === '') {
