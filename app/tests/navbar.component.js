@@ -36,7 +36,7 @@ class NavBar {
   }
 
   async gotoEditDataPage(testController) {
-    await testController.click('#editDataPage');
+    await testController.click('#importDatapage');
   }
 
   async gotoFilterPage(testController) {

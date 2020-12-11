@@ -27,7 +27,7 @@ class CampusNavBar extends React.Component {
           )}
           {this.props.currentUser ? (
               [<Menu.Item as={NavLink} id="dataMenuPage" activeClassName="active" exact to="/data" key='dataPage'>Data Page</Menu.Item>,
-                <Menu.Item as={NavLink} id="editDataPage" activeClassName="active" exact to="/edit" key='editData'>Edit Data</Menu.Item>]
+                <Menu.Item as={NavLink} id="importDatapage" activeClassName="active" exact to="/import" key='editData'>Import Data</Menu.Item>]
           ) : ''}
           {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
               <Menu.Item as={NavLink} id="adminMenuItem" activeClassName="active" exact to="/admin" key='admin'>Admin</Menu.Item>

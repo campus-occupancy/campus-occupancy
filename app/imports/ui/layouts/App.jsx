@@ -35,7 +35,7 @@ class App extends React.Component {
               <Route path="/projects" component={Projects}/>
               <Route path="/interests" component={Interests}/>
               <Route path="/data" component={Datas}/>
-              <Route path="/edit" component={EditDataPage}/>
+              <Route path="/import" component={EditDataPage}/>
               <ProtectedRoute path="/addproject" component={AddProject}/>
               <ProtectedRoute path="/filter" component={Filter}/>
               <Route path="/signin" component={LogIn}/>
