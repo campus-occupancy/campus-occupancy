@@ -51,7 +51,7 @@ class Signup extends React.Component {
               <Grid.Column padded>
                 <Form onSubmit={this.submit}>
                   <Segment raised style={{ padding: '0px', border: '4px solid black' }}>
-                    <Container text fluid textAlign='center'
+                    <Container fluid textAlign='center'
                                style={{
                                  'padding-top': '20px',
                                  'padding-bottom': '20px',
@@ -59,7 +59,7 @@ class Signup extends React.Component {
                                  'margin-bottom': '40px',
                                }}>
                       <Header inverted as='h1' textAlign="center">
-                        Sign up for a new account
+                        CREATE NEW ACCOUNT
                       </Header>
                     </Container>
                     <Form.Input

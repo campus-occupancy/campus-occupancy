@@ -53,14 +53,14 @@ export default class LogIn extends React.Component {
             <Grid.Column>
               <Form onSubmit={this.submit}>
                 <Segment raised style={{ padding: '0px', border: '4px solid black' }}>
-                  <Container text fluid textAlign='center'
+                  <Container fluid textAlign='center'
                                style={{
                                  'padding-top': '20px',
                                  'padding-bottom': '20px',
                                  'background-color': '#376551',
                                  'margin-bottom': '40px',
                                }}>
-                    <Header inverted as='h1'>LOGIN</Header>
+                    <Header inverted as='h1'>LOGIN TO ACCOUNT</Header>
                     </Container>
                     <Form.Input
                         className='form-small'
