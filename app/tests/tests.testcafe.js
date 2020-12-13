@@ -8,14 +8,18 @@ import { editdataPage } from './editdata.page';
 
 /* global fixture:false, test:false */
 
-/** Credentials for one of the sample users defined in settings.development.json. */
-const credentials = { username: 'johnson@hawaii.edu', password: 'foo', firstName: 'Philip', lastName: 'Johnson' };
+/** Creates the credential for this test. */
+const user = `user-${new Date().getTime()}@foo.com`;
+const credentials = { username: user, password: 'PASSWORD', firstName: 'test', lastName: 'app' };
 
 fixture('Campus-Occupancy localhost test with default db')
     .page('http://localhost:3000');
 
-test('Test that landing page shows up', async (testController) => {
+test('Test that landing page shows up and creates an account for test', async (testController) => {
   await landingPage.isDisplayed(testController);
+  await navBar.gotoSignupPage(testController);
+  await signupPage.isDisplayed(testController);
+  await signupPage.signupUser(testController, credentials.username, credentials.password);
 });
 
 test('Test that the login button at landing page works', async (testController) => {
@@ -51,7 +55,7 @@ test('Test that sign out signin button work', async (testController) => {
 
 test('Test that signup page, then logout works', async (testController) => {
   // Create a new user email address that's guaranteed to be unique.
-  const newUser = `user-${new Date().getTime()}@foo.com`;
+  const newUser = `newUser-${new Date().getTime()}@foo.com`;
   await navBar.gotoSignupPage(testController);
   await signupPage.isDisplayed(testController);
   await signupPage.signupUser(testController, newUser, credentials.password);
@@ -60,7 +64,7 @@ test('Test that signup page, then logout works', async (testController) => {
   await signoutPage.isDisplayed(testController);
 });
 
-test('Test that data page displays', async (testController) => {
+test('Test that Data page displays', async (testController) => {
   await navBar.ensureLogout(testController);
   await navBar.gotoSigninPage(testController);
   await signinPage.signin(testController, credentials.username, credentials.password);
@@ -70,7 +74,7 @@ test('Test that data page displays', async (testController) => {
   await signoutPage.isDisplayed(testController);
 });
 
-test('Test that data page displays', async (testController) => {
+test('Test that Import data page displays', async (testController) => {
   await navBar.ensureLogout(testController);
   await navBar.gotoSigninPage(testController);
   await signinPage.signin(testController, credentials.username, credentials.password);

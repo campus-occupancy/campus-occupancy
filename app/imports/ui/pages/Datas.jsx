@@ -17,22 +17,24 @@ class ListData extends React.Component {
   /** Render the page once subscriptions have been received. */
   renderPage() {
     return (
-        <Container>
-          <div><Covid19/></div>
-          <Header as="h2" textAlign="center">Occupancy Data</Header>
-          <Table celled>
-            <Table.Header>
-              <Table.Row>
-                <Table.HeaderCell>Date/Time</Table.HeaderCell>
-                <Table.HeaderCell>Occupancy</Table.HeaderCell>
-                <Table.HeaderCell>Building</Table.HeaderCell>
-              </Table.Row>
-            </Table.Header>
-            <Table.Body>
-              {this.props.datas.map(data => <DataItem key={data._id} data={data}/>)}
-            </Table.Body>
-          </Table>
-        </Container>
+        <div id='data-page'>
+          <Container>
+            <div><Covid19/></div>
+            <Header as="h2" textAlign="center">Occupancy Data</Header>
+            <Table celled>
+              <Table.Header>
+                <Table.Row>
+                  <Table.HeaderCell>Date/Time</Table.HeaderCell>
+                  <Table.HeaderCell>Occupancy</Table.HeaderCell>
+                  <Table.HeaderCell>Building</Table.HeaderCell>
+                </Table.Row>
+              </Table.Header>
+              <Table.Body>
+                {this.props.datas.map(data => <DataItem key={data._id} data={data}/>)}
+              </Table.Body>
+            </Table>
+          </Container>
+        </div>
     );
   }
 }
