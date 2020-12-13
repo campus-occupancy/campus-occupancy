@@ -1,214 +1,133 @@
 {
-  "defaultData": [
+  "defaultProfiles": [
     {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Hamilton P2 508",
-      "Max": 0,
-      "Unique": 0,
-      "Building": "Hamilton Library"
+      "firstName": "Philip",
+      "lastName": "Johnson",
+      "bio": "I am a Professor and like to paddle outrigger canoes.",
+      "title": "Professor",
+      "interests": [
+        "Software Engineering",
+        "Climate Change"
+      ],
+      "projects":[
+        "RadGrad",
+        "Open Power Quality"
+      ],
+      "picture": "https://philipmjohnson.github.io/images/philip2.jpeg",
+      "email": "johnson@hawaii.edu"
     },
     {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Hamilton P2 014 Ewa",
-      "Max": 1,
-      "Unique": 3,
-      "Building": "Hamilton Library"
+      "firstName": "Henri",
+      "lastName": "Casanova",
+      "bio": "In my spare time, I like to scuba dive.",
+      "title": "Professor",
+      "interests": [
+        "HPC",
+        "Distributed Computing"
+      ],
+      "projects":[
+        "WRENCH"
+      ],
+      "picture": "http://www.ics.hawaii.edu/wp-content/uploads/2013/08/Henri_Casanova1.jpg",
+      "email": "henric@hawaii.edu"
     },
     {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Hamilton 4th Fl Asia 20",
-      "Max": 0,
-      "Unique": 0,
-      "Building": "Hamilton Library"
+      "firstName": "Carleton",
+      "lastName": "Moore",
+      "bio": "Every summer, I enjoy visiting Portland, Oregon.",
+      "title": "Assistant Professor",
+      "interests": [
+        "Software Engineering",
+        "Renewable Energy"
+      ],
+      "projects":[
+        "RadGrad"
+      ],
+      "picture": "https://cammoore.github.io/images/cam-moore.jpg",
+      "email": "cmoore@hawaii.edu"
     },
     {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Hamilton P1 002K",
-      "Max": 0,
-      "Unique": 0,
-      "Building": "Hamilton Library"
+      "firstName": "Anthony",
+      "lastName": "Christe",
+      "bio": "I enjoy competitive bicycle racing.",
+      "title": "Ph.D. (2020))",
+      "interests": [
+        "AI",
+        "Distributed Computing"
+      ],
+      "projects":[
+        "Open Power Quality"
+      ],
+      "picture": "https://anthonyjchriste.github.io/images/me.png",
+      "email": "achriste@hawaii.edu"
     },
     {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Hamilton P2 112",
-      "Max": 1,
-      "Unique": 10,
-      "Building": "Hamilton Library"
+      "firstName": "Jason",
+      "lastName": "Leigh",
+      "bio": "I escaped from Chicago and moved to Hawaii in 2014.",
+      "title": "Professor",
+      "interests": [
+        "Visualization"
+      ],
+      "projects":[
+        "Cyber Canoe"
+      ],
+      "picture": "http://www.ics.hawaii.edu/wp-content/uploads/2013/08/Jason_Leigh-2014.jpg",
+      "email": "leighj@hawaii.edu"
     },
     {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Hamilton P2 3rdFl-Freight Elevator",
-      "Max": 0,
-      "Unique": 0,
-      "Building": "Hamilton Library"
+      "firstName": "Serge",
+      "lastName": "Negrashov",
+      "bio": "Most weekends, you can find me on my 8 foot dinghy.",
+      "title": "Ph.D. (2020)",
+      "interests": [
+        "Scalable IP Networks"
+      ],
+      "projects":[
+        "Open Power Quality"
+      ],
+      "picture": "https://sergey-negrashov.github.io/images/serge.jpg",
+      "email": "sin8@hawaii.edu"
+    }
+  ],
+  "defaultProjects": [
+    {
+      "name": "Open Power Quality",
+      "homepage": "https://openpowerquality.org",
+      "description": "Open source hardware and software for distributed power quality data collection, analysis, and visualization.",
+      "interests": [
+        "Software Engineering",
+        "Renewable Energy"
+      ],
+      "picture": "https://avatars0.githubusercontent.com/u/4641939"
     },
     {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Hamilton P2 026",
-      "Max": 1,
-      "Unique": 4,
-      "Building": "Hamilton Library"
+      "name": "RadGrad",
+      "homepage": "https://radgrad.org",
+      "description": "Growing awesome computer scientists, one graduate at a time.",
+      "interests": [
+        "Educational Technology"
+      ],
+      "picture": "https://www.radgrad.org/img/radgrad_logo.png"
     },
     {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Hamilton P2 306 DH",
-      "Max": 1,
-      "Unique": 1,
-      "Building": "Hamilton Library"
+      "name": "WRENCH",
+      "homepage": "https://wrench-project.org",
+      "description": "WRENCH is an open-source library for developing simulators for large-scale scientific computation",
+      "interests": [
+        "Distributed computing"
+      ],
+      "picture": "https://wrench-project.org/images/logo-vertical.png"
     },
     {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Hamilton 4th Fl Asia 16",
-      "Max": 0,
-      "Unique": 0,
-      "Building": "Hamilton Library"
-    },
-    {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Hamilton P2 159 Mauka",
-      "Max": 10,
-      "Unique": 33,
-      "Building": "Hamilton Library"
-    },
-    {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Hamilton 4th Fl Asia 34",
-      "Max": 0,
-      "Unique": 0,
-      "Building": "Hamilton Library"
-    },
-    {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Hamilton P1 101 Hallway",
-      "Max": 4,
-      "Unique": 68,
-      "Building": "Hamilton Library"
-    },
-    {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Hamilton P2 217 Hallway",
-      "Max": 0,
-      "Unique": 0,
-      "Building": "Hamilton Library"
-    },
-    {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Hamilton P2 008 DH",
-      "Max": 1,
-      "Unique": 1,
-      "Building": "Hamilton Library"
-    },
-    {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Hamilton P1 159 Makai",
-      "Max": 16,
-      "Unique": 32,
-      "Building": "Hamilton Library"
-    },
-    {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Hamilton P1 003 Makai",
-      "Max": 1,
-      "Unique": 3,
-      "Building": "Hamilton Library"
-    },
-    {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Hamilton P1 006A GovDocs",
-      "Max": 0,
-      "Unique": 0,
-      "Building": "Hamilton Library"
-    },
-    {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Hamilton P2 008 Ewa",
-      "Max": 4,
-      "Unique": 9,
-      "Building": "Hamilton Library"
-    },
-    {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Hamilton P2 123",
-      "Max": 2,
-      "Unique": 11,
-      "Building": "Hamilton Library"
-    },
-    {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Hamilton P1 006 Ewa",
-      "Max": 1,
-      "Unique": 2,
-      "Building": "Hamilton Library"
-    },
-    {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Spalding 258A",
-      "Max": 0,
-      "Unique": 0,
-      "Building": "Spalding Hall"
-    },
-    {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Spalding 258",
-      "Max": 2,
-      "Unique": 6,
-      "Building": "Spalding Hall"
-    },
-    {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Edmondson 114",
-      "Max": 4,
-      "Unique": 10,
-      "Building": "Edmondson Hall"
-    },
-    {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Edmondson 112",
-      "Max": 13,
-      "Unique": 17,
-      "Building": "Edmondson Hall"
-    },
-    {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Edmondson 111",
-      "Max": 0,
-      "Unique": 1,
-      "Building": "Edmondson Hall"
-    },
-    {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Edmondson 3rd Fl Lanai",
-      "Max": 1,
-      "Unique": 16,
-      "Building": "Edmondson Hall"
-    },
-    {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Edmondson 1st Fl Lanai",
-      "Max": 4,
-      "Unique": 95,
-      "Building": "Edmondson Hall"
-    },
-    {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Edmondson 2nd Fl Lanai",
-      "Max": 2,
-      "Unique": 29,
-      "Building": "Edmondson Hall"
-    },
-    {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Edmondson 104",
-      "Max": 0,
-      "Unique": 2,
-      "Building": "Edmondson Hall"
-    },
-    {
-      "dateTime": "2020-0824_300pm-559pm",
-      "Device": "Edmondson 101",
-      "Max": 10,
-      "Unique": 25,
-      "Building": "Edmondson Hall"
+      "name": "Cyber Canoe",
+      "homepage": "http://lava.manoa.hawaii.edu/blog/2014/07/11/cyber-canoe-cyber-infrastructure-enabled-collaborative-analysis-navigation-and-observation-environment/",
+      "description": "Software for Unity projects involving stereoscopic resolution driven by 9 PCs with a GeForce 980 graphics card.",
+      "interests": [
+        "Unity",
+        "Visualization"
+      ],
+      "picture": "https://www.hawaii.edu/its/wp-content/uploads/sites/2/2019/01/LAVAlogo-300x192-300x192.png"
     }
   ],
   "monti": {
