@@ -15,7 +15,11 @@ const credentials = { username: user, password: 'PASSWORD', firstName: 'test', l
 fixture('Campus-Occupancy localhost test with default db')
     .page('http://localhost:3000');
 
-test('Test that landing page shows up and creates an account for test', async (testController) => {
+test('Test that landing page displays', async (testController) => {
+  await landingPage.isDisplayed(testController);
+});
+
+test('Test Creates an account for test', async (testController) => {
   await landingPage.isDisplayed(testController);
 });
 
