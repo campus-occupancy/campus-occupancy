@@ -17,6 +17,9 @@ fixture('Campus-Occupancy localhost test with default db')
 
 test('Test that landing page shows up and creates an account for test', async (testController) => {
   await landingPage.isDisplayed(testController);
+});
+
+test('Test Create New Account', async (testController) => {
   await navBar.gotoSignupPage(testController);
   await signupPage.isDisplayed(testController);
   await signupPage.signupUser(testController, credentials.username, credentials.password);
