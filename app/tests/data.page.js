@@ -2,7 +2,7 @@ import { Selector } from 'testcafe';
 
 class DataPage {
   constructor() {
-    this.pageId = '#data-page';
+    this.pageId = '#dataMenuPage';
     this.pageSelector = Selector(this.pageId);
   }
 
