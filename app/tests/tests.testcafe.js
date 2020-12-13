@@ -19,10 +19,6 @@ test('Test that landing page displays', async (testController) => {
   await landingPage.isDisplayed(testController);
 });
 
-test('Test Creates an account for test', async (testController) => {
-  await landingPage.isDisplayed(testController);
-});
-
 test('Test Create New Account', async (testController) => {
   await navBar.gotoSignupPage(testController);
   await signupPage.isDisplayed(testController);
