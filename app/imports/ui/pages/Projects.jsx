@@ -1,3 +1,4 @@
+/*
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { Container, Loader, Card, Image, Label } from 'semantic-ui-react';
@@ -9,7 +10,7 @@ import { ProfilesProjects } from '../../api/profiles/ProfilesProjects';
 import { Projects } from '../../api/projects/Projects';
 import { ProjectsInterests } from '../../api/projects/ProjectsInterests';
 
-/** Gets the Project data as well as Profiles and Interests associated with the passed Project name. */
+/!** Gets the Project data as well as Profiles and Interests associated with the passed Project name. *!/
 function getProjectData(name) {
   const data = Projects.collection.findOne({ name });
   const interests = _.pluck(ProjectsInterests.collection.find({ project: name }).fetch(), 'interest');
@@ -18,7 +19,7 @@ function getProjectData(name) {
   return _.extend({ }, data, { interests, participants: profilePictures });
 }
 
-/** Component for layout out a Project Card. */
+/!** Component for layout out a Project Card. *!/
 const MakeCard = (props) => (
   <Card>
     <Card.Content>
@@ -45,15 +46,15 @@ MakeCard.propTypes = {
   project: PropTypes.object.isRequired,
 };
 
-/** Renders the Project Collection as a set of Cards. */
+/!** Renders the Project Collection as a set of Cards. *!/
 class ProjectsPage extends React.Component {
 
-  /** If the subscription(s) have been received, render the page, otherwise show a loading icon. */
+  /!** If the subscription(s) have been received, render the page, otherwise show a loading icon. *!/
   render() {
     return (this.props.ready) ? this.renderPage() : <Loader active>Getting data</Loader>;
   }
 
-  /** Render the page once subscriptions have been received. */
+  /!** Render the page once subscriptions have been received. *!/
   renderPage() {
     const projects = _.pluck(Projects.collection.find().fetch(), 'name');
     const projectData = projects.map(project => getProjectData(project));
@@ -71,7 +72,7 @@ ProjectsPage.propTypes = {
   ready: PropTypes.bool.isRequired,
 };
 
-/** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
+/!** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker *!/
 export default withTracker(() => {
   // Ensure that minimongo is populated with all collections prior to running render().
   const sub1 = Meteor.subscribe(ProfilesProjects.userPublicationName);
@@ -82,3 +83,4 @@ export default withTracker(() => {
     ready: sub1.ready() && sub2.ready() && sub3.ready() && sub4.ready(),
   };
 })(ProjectsPage);
+*/

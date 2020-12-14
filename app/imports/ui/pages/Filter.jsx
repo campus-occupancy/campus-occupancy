@@ -1,3 +1,4 @@
+/*
 import React from 'react';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import { Meteor } from 'meteor/meteor';
@@ -14,7 +15,7 @@ import { ProfilesProjects } from '../../api/profiles/ProfilesProjects';
 import { Projects } from '../../api/projects/Projects';
 import MultiSelectField from '../forms/controllers/MultiSelectField';
 
-/** Create a schema to specify the structure of the data to appear in the form. */
+/!** Create a schema to specify the structure of the data to appear in the form. *!/
 const makeSchema = (allInterests) => new SimpleSchema({
   interests: { type: Array, label: 'Interests', optional: true },
   'interests.$': { type: String, allowedValues: allInterests },
@@ -28,7 +29,7 @@ function getProfileData(email) {
   return _.extend({ }, data, { interests, projects: projectPictures });
 }
 
-/** Component for layout out a Profile Card. */
+/!** Component for layout out a Profile Card. *!/
 const MakeCard = (props) => (
   <Card>
     <Card.Content>
@@ -52,12 +53,12 @@ const MakeCard = (props) => (
   </Card>
 );
 
-/** Properties */
+/!** Properties *!/
 MakeCard.propTypes = {
   profile: PropTypes.object.isRequired,
 };
 
-/** Renders the Profile Collection as a set of Cards. */
+/!** Renders the Profile Collection as a set of Cards. *!/
 class Filter extends React.Component {
 
   constructor(props) {
@@ -69,12 +70,12 @@ class Filter extends React.Component {
     this.setState({ interests: data.interests || [] });
   }
 
-  /** If the subscription(s) have been received, render the page, otherwise show a loading icon. */
+  /!** If the subscription(s) have been received, render the page, otherwise show a loading icon. *!/
   render() {
     return (this.props.ready) ? this.renderPage() : <Loader active>Getting data</Loader>;
   }
 
-  /** Render the page once subscriptions have been received. */
+  /!** Render the page once subscriptions have been received. *!/
   renderPage() {
     const allInterests = _.pluck(Interests.collection.find().fetch(), 'name');
     const formSchema = makeSchema(allInterests);
@@ -97,12 +98,12 @@ class Filter extends React.Component {
   }
 }
 
-/** Require an array of Stuff documents in the props. */
+/!** Require an array of Stuff documents in the props. *!/
 Filter.propTypes = {
   ready: PropTypes.bool.isRequired,
 };
 
-/** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
+/!** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker *!/
 export default withTracker(() => {
   // Ensure that minimongo is populated with all collections prior to running render().
   const sub1 = Meteor.subscribe(Profiles.userPublicationName);
@@ -114,3 +115,4 @@ export default withTracker(() => {
     ready: sub1.ready() && sub2.ready() && sub3.ready() && sub4.ready() && sub5.ready(),
   };
 })(Filter);
+*/

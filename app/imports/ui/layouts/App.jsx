@@ -5,12 +5,12 @@ import 'semantic-ui-css/semantic.css';
 import { Roles } from 'meteor/alanning:roles';
 import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import Footer from '../components/Footer';
-import Home from '../pages/Home';
-import Profiles from '../pages/Profiles';
-import AddProject from '../pages/AddProject';
-import Projects from '../pages/Projects';
-import Filter from '../pages/Filter';
-import Interests from '../pages/Interests';
+// import Home from '../pages/Home';
+//  import Profiles from '../pages/Profiles';
+//  import AddProject from '../pages/AddProject';
+//  import Projects from '../pages/Projects';
+//  import Filter from '../pages/Filter';
+//  import Interests from '../pages/Interests';
 import NotFound from '../pages/NotFound';
 import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
@@ -30,14 +30,14 @@ class App extends React.Component {
           <div style={{ paddingTop: '10px', paddingBottom: '10px' } }>
             <Switch>
               <Route exact path="/" component={LandingPage}/>
-              <ProtectedRoute path="/home" component={Home}/>
-              <Route path="/profiles" component={Profiles}/>
-              <Route path="/projects" component={Projects}/>
-              <Route path="/interests" component={Interests}/>
+              {/* <ProtectedRoute path="/home" component={Home}/>  */}
+              {/*  <Route path="/profiles" component={Profiles}/>  */}
+              {/*  <Route path="/projects" component={Projects}/>  */}
+              {/*  <Route path="/interests" component={Interests}/>  */}
               <Route path="/data" component={Datas}/>
               <Route path="/import" component={EditDataPage}/>
-              <ProtectedRoute path="/addproject" component={AddProject}/>
-              <ProtectedRoute path="/filter" component={Filter}/>
+              {/* <ProtectedRoute path="/addproject" component={AddProject}/> */}
+              {/* <ProtectedRoute path="/filter" component={Filter}/> */}
               <Route path="/signin" component={LogIn}/>
               <Route path="/signup" component={Signup}/>
               <ProtectedRoute path="/signout" component={Signout}/>

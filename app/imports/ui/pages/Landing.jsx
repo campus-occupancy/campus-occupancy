@@ -1,7 +1,8 @@
+/*
 import React from 'react';
 import { Grid, Image, Container, Header } from 'semantic-ui-react';
 
-/** Renders a color-blocked static landing page. */
+/!** Renders a color-blocked static landing page. *!/
 class Landing extends React.Component {
   render() {
     return (
@@ -59,3 +60,4 @@ class Landing extends React.Component {
 }
 
 export default Landing;
+*/

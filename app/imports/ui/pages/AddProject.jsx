@@ -1,3 +1,4 @@
+/*
 import React from 'react';
 import { Grid, Segment, Header, Form } from 'semantic-ui-react';
 import { AutoForm, TextField, LongTextField, SubmitField, ErrorsField } from 'uniforms-semantic';
@@ -16,7 +17,7 @@ import { ProfilesInterests } from '../../api/profiles/ProfilesInterests';
 import { ProfilesProjects } from '../../api/profiles/ProfilesProjects';
 import { Projects } from '../../api/projects/Projects';
 
-/** Create a schema to specify the structure of the data to appear in the form. */
+/!** Create a schema to specify the structure of the data to appear in the form. *!/
 const makeSchema = (allInterests, allParticipants) => new SimpleSchema({
   name: String,
   description: String,
@@ -28,10 +29,10 @@ const makeSchema = (allInterests, allParticipants) => new SimpleSchema({
   'participants.$': { type: String, allowedValues: allParticipants },
 });
 
-/** Renders the Page for adding a document. */
+/!** Renders the Page for adding a document. *!/
 class AddProject extends React.Component {
 
-  /** On submit, insert the data. */
+  /!** On submit, insert the data. *!/
   submit(data, formRef) {
     Meteor.call(addProjectMethod, data, (error) => {
       if (error) {
@@ -42,7 +43,7 @@ class AddProject extends React.Component {
     });
   }
 
-  /** Render the form. Use Uniforms: https://github.com/vazco/uniforms */
+  /!** Render the form. Use Uniforms: https://github.com/vazco/uniforms *!/
   render() {
     let fRef = null;
     const allInterests = _.pluck(Interests.collection.find().fetch(), 'name');
@@ -79,7 +80,7 @@ AddProject.propTypes = {
   ready: PropTypes.bool.isRequired,
 };
 
-/** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
+/!** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker *!/
 export default withTracker(() => {
   // Ensure that minimongo is populated with all collections prior to running render().
   const sub1 = Meteor.subscribe(Interests.userPublicationName);
@@ -91,3 +92,4 @@ export default withTracker(() => {
     ready: sub1.ready() && sub2.ready() && sub3.ready() && sub4.ready() && sub5.ready(),
   };
 })(AddProject);
+*/

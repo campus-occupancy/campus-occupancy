@@ -15,6 +15,7 @@ class NavBar {
     await testController.click('#login-button');
   }
 
+/*
   async gotoProfilesPage(testController) {
     await testController.click('#profilesMenuItem');
   }
@@ -30,6 +31,7 @@ class NavBar {
   async gotoAddProjectPage(testController) {
     await testController.click('#addProjectMenuItem');
   }
+*/
 
   async gotoDataPage(testController) {
     await testController.click('#dataMenuPage');
@@ -38,10 +40,12 @@ class NavBar {
   async gotoEditDataPage(testController) {
     await testController.click('#importDatapage');
   }
+/*
 
   async gotoFilterPage(testController) {
     await testController.click('#filterMenuItem');
   }
+*/
 
   /** Check that the specified user is currently logged in. */
   async isLoggedIn(testController, username) {
