@@ -13,6 +13,8 @@ import CovidSlider from '../../api/Covid19/covidSlider';
 import CovidMap from '../../api/Covid19/CovidMap';
 import Legend from '../../api/Covid19/Legend';
 
+/*
+
 const Covid19 = () => {
   const [buildings, setBuildings] = useState([]); // possibly have to change this line
   const legendItemsInReverse = [...legendItems].reverse();
@@ -36,13 +38,13 @@ const Covid19 = () => {
         </div>
         }
       </div>);
-};
+}; */
 
  class Covid19Map extends React.Component {
    /* constructor(props) {
      super(props);
      // this.state = {  [buildings, setBuildings] };
-   }*/
+   } */
 
    setState = null;
 
