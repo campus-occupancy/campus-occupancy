@@ -29,7 +29,6 @@ const CovidMap = () => {
             style={mapStyle}
             data={datas}
             onEachFeature={onEachBuilding}
-            filter={filterBuilding}
         />;
         <TileLayer
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

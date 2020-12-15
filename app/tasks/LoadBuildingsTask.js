@@ -1,46 +1,42 @@
 import papa from 'papaparse';
 import { features } from '../data/campusmap.json';
 import legendItems from '../entities/LegendItems';
+import PropTypes from 'prop-types';
+import { withTracker } from 'meteor/react-meteor-data';
+import { Meteor } from "meteor/meteor";
+import { _ } from 'meteor/underscore';
+import { Datas } from '../imports/api/dataDensity/Datas';
 
 /**
 * File: LoadBuildingsTask
 * Description: This task of this class is basically to gather data and parses it into a json file
 * which is then used by the Covid components to display it on the map
  */
-
 class LoadBuildingsTask {
-  covid19DataUrl = 'https://raw.githubusercontent.com/HACC2020/data/main/uh_occupancy/2020-0824_1200pm-259pm_devices_1598317333.csv';
 
   setState = null;
-
+  // I removed the papaparse, since I dont think its possible to use in on the colelction
   load = (setState) => {
     this.setState = setState;
-    papa.parse('2020-0824_600pm-859pm_devices_1598338888.csv', {
-      download: true,
-      dynamicTyping: true,
-      header: true,
-      complete: (result) => {
-        console.log(result);
-        this.#processCovidData(result.data);
-        // this.#sliderProcessData(result.data);
-      },
-    });
-
+    // So to avoid removing all the work you have done, I tried to just work with the collection dirrection
+    const test = Datas.find({}).fetch(); // load the datas from collection
+    console.log(test);
+    this.#processCovidData(test);
   };
 
   #processCovidData = (covidBuildings) => {
     for (let i = 0; i < features.length; i++) {
       const building = features[i];
       // eslint-disable-next-line no-shadow
-      const covidBuilding = covidBuildings.find((covidBuilding) => building.properties.Building === covidBuilding.Building);
+      const covidBuilding = covidBuildings.find((covidBuilding) => {
+        return building.properties.Building === covidBuilding.Building });
 
       building.properties.confirmed = 0;
       building.properties.confirmedText = '0';
 
       if (covidBuilding != null) {
-        const similarbuilding = covidBuildings.filter( age => age > 18 );
-        console.log(similarbuilding);
-        const confirmed = covidBuilding['Unique Clients'];
+        console.log(covidBuilding);
+        const confirmed = covidBuilding['Unique'];
         building.properties.confirmed = confirmed;
         building.properties.confirmedText = confirmed;
       }
@@ -82,5 +78,19 @@ class LoadBuildingsTask {
     if (legendItem != null) building.properties.color = legendItem.color;
   };
 }
+LoadBuildingsTask.propTypes = {
+  datas: PropTypes.array.isRequired,
+  ready: PropTypes.bool.isRequired,
+};
+
+/** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
+withTracker(() => {
+  // Get access to Stuff documents.
+  const subscription = Meteor.subscribe('Datas');
+  return {
+    datas: Datas.find({}).fetch(),
+    ready: subscription.ready(),
+  };
+})(LoadBuildingsTask);
 
 export default LoadBuildingsTask;
