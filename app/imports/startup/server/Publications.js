@@ -12,10 +12,10 @@ Meteor.publish(Interests.userPublicationName, () => Interests.collection.find())
 /** Define a publication to publish all profiles. */
 /** This subscription publishes only the documents associated with the logged in user */
 Meteor.publish('Datas', function publish() {
-  console.log('Datas');
+  // console.log('Datas');
 
-    // const username = Meteor.users.findOne(this.userId).username;
-    return Datas.find();
+  // const username = Meteor.users.findOne(this.userId).username;
+  return Datas.find();
 });
 
 /** Define a publication to publish this collection. */
