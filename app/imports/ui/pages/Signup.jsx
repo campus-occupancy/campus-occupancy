@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { Link, Redirect } from 'react-router-dom';
 import { Container, Form, Grid, Header, Message, Segment } from 'semantic-ui-react';
 import { Accounts } from 'meteor/accounts-base';
-import { Profiles } from '../../api/profiles/Profiles';
 
 /**
  * Signup component is similar to signin component, but we create a new user instead.
@@ -27,20 +26,14 @@ class Signup extends React.Component {
       if (err) {
         this.setState({ error: err.reason });
       } else {
-        Profiles.insert({ email }, (err2) => {
-          if (err2) {
-            this.setState({ error: err2.reason });
-          } else {
-            this.setState({ error: '', redirectToReferer: true });
-          }
-        });
+        this.setState({ error: '', redirectToReferer: true });
       }
     });
   }
 
   /** Display the signup form. */
   render() {
-    const { from } = this.props.location.state || { from: { pathname: '/home' } };
+    const { from } = this.props.location.state || { from: { pathname: '/data' } };
     // if correct authentication, redirect to from: page instead of signup screen
     if (this.state.redirectToReferer) {
       return <Redirect to={from}/>;
@@ -57,7 +50,7 @@ class Signup extends React.Component {
             <Grid textAlign="center" verticalAlign="middle" centered columns={2}>
               <Grid.Column padded>
                 <Form onSubmit={this.submit}>
-                  <Segment raised style={{ padding: '0px'}}>
+                  <Segment raised style={ { padding: '0px' } }>
                     <Container text fluid textAlign='center'
                                style={{
                                  'padding-top': '20px',
@@ -92,8 +85,8 @@ class Signup extends React.Component {
                         onChange={this.handleChange}
                     />
                     <Form.Button size='large' fluid className='form-small' id="signup-form-submit" content="Submit"/>
-                    <Message style={{backgroundColor:'#363636', border:'none'}}>
-                       <Link to="/signin" style={{color:'white'}}>Already have an account? Login here</Link>
+                    <Message style={ { backgroundColor: '#363636', border: 'none' }}>
+                       <Link to="/signin" style={ { color: 'white' } }>Already have an account? Login here</Link>
                     </Message>
                   </Segment>
                 </Form>

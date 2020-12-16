@@ -16,7 +16,7 @@ function createUser(email, role) {
 
 /** Initialize the database with a default data document. */
 function addData(data) {
-  console.log(`  Adding: ${data.Device} (${data.Unique})`);
+  console.log(`  Adding: ${data.Building} (${data.Unique})`);
   Datas.insert(data);
 }
 
@@ -36,7 +36,7 @@ if (Datas.find().count() === 0) {
  * For more info on assets, see https://docs.meteor.com/api/assets.html
  * User count check is to make sure we don't load the file twice, which would generate errors due to duplicate info.
  */
-if ((Meteor.settings.loadAssetsFile) && (Meteor.users.find().count() < 7)) {
+if ((Meteor.settings.loadAssetsFile) && (Datas.find().count() === 0)) {
   const assetsFileName = 'data.json';
   console.log(`Loading data from private/${assetsFileName}`);
   // eslint-disable-next-line no-unused-vars
