@@ -23,7 +23,8 @@
   "extends": [
     "airbnb/base",
     "plugin:meteor/recommended",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended"
   ],
   "rules": {
     "arrow-parens": "off",

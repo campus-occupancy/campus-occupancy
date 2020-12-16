@@ -42,25 +42,25 @@ export default class LogIn extends React.Component {
     }
     // Otherwise return the Login form.
     return (
-        <div style={ {
+        <div style={{
           height: '550px',
           backgroundColor: 'beige',
           paddingTop: '10vh',
           paddingBottom: '10vh',
-        } }>
+        }}>
           <Container id="signin-page">
-          <Grid textAlign="center" verticalAlign="middle" centered columns={2}>
-            <Grid.Column>
-              <Form onSubmit={this.submit}>
-                <Segment raised style={{ padding: '0px', border: '4px solid black' }}>
-                  <Container fluid textAlign='center'
+            <Grid textAlign="center" verticalAlign="middle" centered columns={2}>
+              <Grid.Column>
+                <Form onSubmit={this.submit}>
+                  <Segment raised style={{ padding: '0px', border: 'none' }}>
+                    <Container text fluid textAlign='center'
                                style={{
                                  'padding-top': '20px',
                                  'padding-bottom': '20px',
                                  'background-color': '#376551',
                                  'margin-bottom': '40px',
                                }}>
-                    <Header inverted as='h1'>LOGIN TO ACCOUNT</Header>
+                      <Header inverted as='h1' style={{ letterSpacing: '2px' }}>LOGIN</Header>
                     </Container>
                     <Form.Input
                         className='form-small'
@@ -85,24 +85,24 @@ export default class LogIn extends React.Component {
                         onChange={this.handleChange}
                     />
                     <Form.Button size='large' fluid className='form-small' id="signin-form-submit" content="Submit"/>
-                    <Message>
+                    <Message style={{ backgroundColor: '#363636', border: 'none' }}>
                       <Container textAlign='center' id='signup-page'>
-                        <Link to="/signup">Click here to Register</Link></Container>
+                        <Link to="/signup" style={{ color: 'white' }}>Don&apos;t have a Login? Click here to Register</Link></Container>
                     </Message>
                   </Segment>
-              </Form>
-              {this.state.error === '' ? (
-                  ''
-              ) : (
-                  <Message
-                      error
-                      header="Login was not successful"
-                      content={this.state.error}
-                  />
-              )}
-            </Grid.Column>
-          </Grid>
-        </Container>
+                </Form>
+                {this.state.error === '' ? (
+                    ''
+                ) : (
+                    <Message
+                        error
+                        header="Login was not successful"
+                        content={this.state.error}
+                    />
+                )}
+              </Grid.Column>
+            </Grid>
+          </Container>
         </div>
     );
   }

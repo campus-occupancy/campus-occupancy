@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Link, Redirect } from 'react-router-dom';
 import { Container, Form, Grid, Header, Message, Segment } from 'semantic-ui-react';
 import { Accounts } from 'meteor/accounts-base';
+import { Profiles } from '../../api/profiles/Profiles';
 
 /**
  * Signup component is similar to signin component, but we create a new user instead.
@@ -26,14 +27,20 @@ class Signup extends React.Component {
       if (err) {
         this.setState({ error: err.reason });
       } else {
-        this.setState({ error: '', redirectToReferer: true });
+        Profiles.insert({ email }, (err2) => {
+          if (err2) {
+            this.setState({ error: err2.reason });
+          } else {
+            this.setState({ error: '', redirectToReferer: true });
+          }
+        });
       }
     });
   }
 
   /** Display the signup form. */
   render() {
-    const { from } = this.props.location.state || { from: { pathname: '/data' } };
+    const { from } = this.props.location.state || { from: { pathname: '/home' } };
     // if correct authentication, redirect to from: page instead of signup screen
     if (this.state.redirectToReferer) {
       return <Redirect to={from}/>;
@@ -50,8 +57,8 @@ class Signup extends React.Component {
             <Grid textAlign="center" verticalAlign="middle" centered columns={2}>
               <Grid.Column padded>
                 <Form onSubmit={this.submit}>
-                  <Segment raised style={{ padding: '0px', border: '4px solid black' }}>
-                    <Container fluid textAlign='center'
+                  <Segment raised style={{ padding: '0px'}}>
+                    <Container text fluid textAlign='center'
                                style={{
                                  'padding-top': '20px',
                                  'padding-bottom': '20px',
@@ -59,7 +66,7 @@ class Signup extends React.Component {
                                  'margin-bottom': '40px',
                                }}>
                       <Header inverted as='h1' textAlign="center">
-                        CREATE NEW ACCOUNT
+                        Sign up for a new account
                       </Header>
                     </Container>
                     <Form.Input
@@ -85,8 +92,8 @@ class Signup extends React.Component {
                         onChange={this.handleChange}
                     />
                     <Form.Button size='large' fluid className='form-small' id="signup-form-submit" content="Submit"/>
-                    <Message>
-                      Already have an account? Login <Link to="/signin">here</Link>
+                    <Message style={{backgroundColor:'#363636', border:'none'}}>
+                       <Link to="/signin" style={{color:'white'}}>Already have an account? Login here</Link>
                     </Message>
                   </Segment>
                 </Form>

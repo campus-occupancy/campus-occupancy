@@ -1,23 +1,54 @@
 import React from 'react';
+import { Container, Grid, Image, Segment } from 'semantic-ui-react';
 
 /** The Footer appears at the bottom of every page. Rendered by the App Layout component. */
 class Footer extends React.Component {
   render() {
-    const divStyle = { paddingBottom: '10px', paddingTop: '10px' };
+    const header = { fontSize: '14px', color: 'white', paddingBottom: '5px', letterspacing: '3px' };
+    const footercolor = { backgroundColor: '#363636', paddingLeft: '50px', paddingTop: '50px', paddingBottom: '50px' };
+    const footercolor2 = { backgroundColor: '#363636', border: 'none', boxShadow: 'none' };
+    const columnpicAdjust = { paddingLeft: '70px' };
     return (
-      <div className='landing-green-background' style={divStyle}>
-        <footer>
-          <div className="ui center aligned container">
-              The Campus-Occupancy Team<br />
-              ICS 314 Final Project<br />
-              University of Hawaii<br />
-              Honolulu, HI 96822 <br />
-            <a style={{ color: 'white' }} href="https://campus-occupancy.github.io">https://campus-occupancy.github.io</a>
-          </div>
-        </footer>
-      </div>
-    );
-  }
+        <div>
+          <Container textAlign="left" style={footercolor}>
+            <Segment style={footercolor2}>
+              <Grid columns={3} relaxed='very'>
+                <Grid.Column style={columnpicAdjust}>
+                  <p>
+                    <Image size='medium' src="/images/uhm-white-seal-nameplate.png" />
+                  </p>
+                </Grid.Column>
+                <Grid.Column>
+                  <div style={header}>
+                    A-Z Index
+                  </div>
+                  <div style={header}>
+                    Academic Calendar
+                  </div>
+                  <div style={header}>
+                    Accessibility at UH
+                  </div>
+                  <div style={header}>
+                    Campus Directory
+                  </div>
+                  <div style={header}>
+                    Campus Maps
+                  </div>
+                  <div style={header}>
+                    Parking & Transportation
+                  </div>
+                  <div style={header}>
+                    Visiting the Campus
+                  </div>
+                </Grid.Column>
+                <Grid.Column>
+                </Grid.Column>
+              </Grid>
+              </Segment>
+          </Container>
+        </div>
+  );
+}
 }
 
 export default Footer;

@@ -5,10 +5,11 @@ import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { Datas } from '../../api/dataDensity/Datas';
 import DataItem from '../components/DataItem';
-import Covid19 from '../../api/Covid19/Covid19';
+import Covid19Map from '../components/Covid19Map';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class ListData extends React.Component {
+
   /** If the subscription(s) have been received, render the page, otherwise show a loading icon. */
   render() {
     return (this.props.ready) ? this.renderPage() : <Loader>Getting data</Loader>;
@@ -17,24 +18,25 @@ class ListData extends React.Component {
   /** Render the page once subscriptions have been received. */
   renderPage() {
     return (
-        <div id='data-page'>
-          <Container>
-            <div><Covid19/></div>
-            <Header as="h2" textAlign="center">Occupancy Data</Header>
-            <Table celled>
-              <Table.Header>
-                <Table.Row>
-                  <Table.HeaderCell>Date/Time</Table.HeaderCell>
-                  <Table.HeaderCell>Occupancy</Table.HeaderCell>
-                  <Table.HeaderCell>Building</Table.HeaderCell>
-                </Table.Row>
-              </Table.Header>
-              <Table.Body>
-                {this.props.datas.map(data => <DataItem key={data._id} data={data}/>)}
-              </Table.Body>
-            </Table>
-          </Container>
-        </div>
+        <Container>
+          <div><Covid19Map
+              datas = {this.props.datas}
+          /></div>
+          <Header as="h2" textAlign="center">Occupancy Data</Header>
+          <Table celled>
+            <Table.Header>
+              <Table.Row>
+                <Table.HeaderCell>Date/Time</Table.HeaderCell>
+                <Table.HeaderCell>Occupancy</Table.HeaderCell>
+                <Table.HeaderCell>Building</Table.HeaderCell>
+              </Table.Row>
+            </Table.Header>
+            <Table.Body>
+              {this.props.datas.map((data) => <DataItem key={data._id} data={data}/>)}
+            </Table.Body>
+          </Table>
+        </Container>
+
     );
   }
 }
@@ -46,7 +48,7 @@ ListData.propTypes = {
 
 /** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
 export default withTracker(() => {
-  // Get access to Stuff documents.
+  // Get access to Data documents.
   const subscription = Meteor.subscribe('Datas');
   return {
     datas: Datas.find({}).fetch(),
