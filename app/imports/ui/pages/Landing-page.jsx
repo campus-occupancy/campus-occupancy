@@ -29,7 +29,9 @@ class LandingPage extends React.Component {
               </div>
             </Container>
           </div>
-          <div><Covid19Map/></div>
+          <div><Covid19Map
+              datas = {this.props.datas}
+          /></div>
         </div>
     );
   }

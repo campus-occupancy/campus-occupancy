@@ -45,7 +45,6 @@ const Covid19 = () => {
      super(props);
      console.log(this.props.datas);
      this.load();
-     console.log(this.load);
      this.state = {
        Buildings: undefined,
      };
@@ -60,12 +59,12 @@ const Covid19 = () => {
    load = () => {
      // this.setState = setState;
      const covid19Data = this.props.datas;
-     console.log(`This is the data${this.props.datas}`);
+     // console.log(`This is the data${this.props.datas}`);
      this.#processCovidData(covid19Data);
 
    };
 
-    //covidBuildings = this.props.datas;
+    // covidBuildings = this.props.datas;
 
    #processCovidData = (covidBuildings) => {
      for (let i = 0; i < features.length; i++) {
@@ -97,10 +96,6 @@ const Covid19 = () => {
    }
 
   render() {
-    return (this.props.ready) ? this.renderPage() : <Loader>Getting data</Loader>;
-  }
-
-  renderPage() {
      // const mapData = processCovidData(this.props.datas);
      const legendItemsInReverse = [...legendItems].reverse();
 
