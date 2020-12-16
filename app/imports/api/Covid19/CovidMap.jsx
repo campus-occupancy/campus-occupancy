@@ -24,7 +24,7 @@ const CovidMap = () => {
     if (building.properties.Building === 'Art') return true;
   }; */
 
-  return (<Map style={{ height: '90vh' }} zoom={17} center={[21.29930, -157.81563]} scrollWheelZoom={false}>
+  return (<Map style={{ height: '90vh' }} zoom={17} center={[21.29930, -157.81563]}>
         <GeoJSON
             style={mapStyle}
             data={datas}

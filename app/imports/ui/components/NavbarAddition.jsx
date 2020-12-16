@@ -10,7 +10,7 @@ class NavbarAddition extends React.Component {
 
   render() {
     const header = { fontSize: '15px', color: 'white' };
-    const navColor = { backgroundColor: '#b11b29', paddingLeft: '50px', paddingTop: '20px', paddingBottom: '20px' };
+    const navColor = { backgroundColor: '#b11b29', paddingLeft: '50px', paddingTop: '20px', paddingBottom: '20px', width: 'auto' };
     // eslint-disable-next-line no-unused-vars
     const marginFix = { marginRight: '1px' };
     return (
