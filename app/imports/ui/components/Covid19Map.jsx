@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { features } from '../../../data/campusmap.json';
 import legendItems from '../../../entities/LegendItems';
-import CovidSlider from '../../api/Covid19/covidSlider';
 import CovidMap from '../../api/Covid19/CovidMap';
 import Legend from '../../api/Covid19/Legend';
 

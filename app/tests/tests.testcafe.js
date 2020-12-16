@@ -1,6 +1,5 @@
 import { landingPage } from './landing.page';
 import { signinPage } from './signin.page';
-import { signoutPage } from './signout.page';
 import { signupPage } from './signup.page';
 import { navBar } from './navbar.component';
 import { dataPage } from './data.page';
@@ -35,25 +34,7 @@ test('Test that signin and signout work', async (testController) => {
   await landingPage.gotToLogIn(testController);
   await signinPage.signin(testController, credentials.username, credentials.password);
   await navBar.logout(testController);
-  await signoutPage.isDisplayed(testController);
-});
-
-test('Test that sign out home button work', async (testController) => {
-  await landingPage.gotToLogIn(testController);
-  await signinPage.signin(testController, credentials.username, credentials.password);
-  await navBar.logout(testController);
-  await signoutPage.isDisplayed(testController);
-  await signoutPage.backToHome(testController);
   await landingPage.isDisplayed(testController);
-});
-
-test('Test that sign out signin button work', async (testController) => {
-  await landingPage.gotToLogIn(testController);
-  await signinPage.signin(testController, credentials.username, credentials.password);
-  await navBar.logout(testController);
-  await signoutPage.isDisplayed(testController);
-  await signoutPage.backToLogIn(testController);
-  await signinPage.isDisplayed(testController);
 });
 
 test('Test that signup page, then logout works', async (testController) => {
@@ -64,7 +45,7 @@ test('Test that signup page, then logout works', async (testController) => {
   await signupPage.signupUser(testController, newUser, credentials.password);
   // New user has successfully logged in, so now let's logout.
   await navBar.logout(testController);
-  await signoutPage.isDisplayed(testController);
+  await landingPage.isDisplayed(testController);
 });
 
 test('Test that Data page displays', async (testController) => {
@@ -74,7 +55,7 @@ test('Test that Data page displays', async (testController) => {
   await navBar.gotoDataPage(testController);
   await dataPage.isDisplayed(testController);
   await navBar.logout(testController);
-  await signoutPage.isDisplayed(testController);
+  await landingPage.isDisplayed(testController);
 });
 
 test('Test that Import data page displays', async (testController) => {
@@ -84,5 +65,5 @@ test('Test that Import data page displays', async (testController) => {
   await navBar.gotoEditDataPage(testController);
   await editdataPage.isDisplayed(testController);
   await navBar.logout(testController);
-  await signoutPage.isDisplayed(testController);
+  await landingPage.isDisplayed(testController);
 });

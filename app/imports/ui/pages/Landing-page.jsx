@@ -15,7 +15,7 @@ class LandingPage extends React.Component {
   renderPage() {
     const landingColor = { backgroundColor: 'white', paddingLeft: '50px', paddingTop: '20px', paddingBottom: '20px' };
     return (
-        <div id="landing-page">
+        <div id='landing-page'>
           <div style={landingColor}>
             <Container textAlign='center'>
               <Header style={{ paddingTop: '15px', color: '#376551', fontSize: '30pt', letterSpacing: '2px' }}

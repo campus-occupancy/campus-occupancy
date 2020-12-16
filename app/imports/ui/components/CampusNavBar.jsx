@@ -31,12 +31,14 @@ class CampusNavBar extends React.Component {
     return (
         <Menu style={menuStyle} attached="top" borderless>
           {this.props.currentUser === '' ? (
-              <Menu.Item as={NavLink} activeClassName="" exact to="/signin">
+              // The id for this Menu item is used in Test
+              <Menu.Item as={NavLink} id='login-button' activeClassName="" exact to="/signin">
                 <span className='bowfolio-green'
                       style={{ color: 'white', fontWeight: 800, fontSize: '24px', letterSpacing: '2px' }}>Login</span>
               </Menu.Item>
           ) : (
-              <Menu.Item as={NavLink} activeClassName="" exact to="/data">
+              // The id For this Menu item is used on test
+              <Menu.Item id='navbar-current-user' text={this.props.currentUser} as={NavLink} activeClassName="" exact to="/data">
 
                 <span className='bowfolio-green' style={{
                   color: 'white',
