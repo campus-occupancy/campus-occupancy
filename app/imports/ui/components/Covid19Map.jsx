@@ -41,19 +41,31 @@ const Covid19 = () => {
 }; */
 
  class Covid19Map extends React.Component {
-   /* constructor(props) {
+   constructor(props) {
      super(props);
-     // this.state = {  [buildings, setBuildings] };
-   } */
+     console.log(this.props.datas);
+     this.load();
+     console.log(this.load);
+     this.state = {
+       Buildings: undefined,
+     };
+   }
 
-   setState = null;
+   handleChange = event => {
+     this.setState({
+       buildings: event.target.buildings[0],
+     });
+   };
 
-   load = (setState) => {
-     this.setState = setState;
-     const covid19Data = this.props.data;
-     this.processCovidData(covid19Data);
+   load = () => {
+     // this.setState = setState;
+     const covid19Data = this.props.datas;
+     console.log(`This is the data${this.props.datas}`);
+     this.#processCovidData(covid19Data);
 
    };
+
+    //covidBuildings = this.props.datas;
 
    #processCovidData = (covidBuildings) => {
      for (let i = 0; i < features.length; i++) {
@@ -65,12 +77,12 @@ const Covid19 = () => {
        building.properties.confirmedText = '0';
 
        if (covidBuilding != null) {
-         const confirmed = covidBuilding['Unique Clients'];
+         const confirmed = covidBuilding.Unique;
          // console.log(covidBuilding['Unique Clients']);
          building.properties.confirmed = confirmed;
          building.properties.confirmedText = confirmed;
        }
-       this.setBuildingColor(building);
+       this.#setBuildingColor(building);
      }
 
      this.setState(features);
@@ -110,15 +122,8 @@ const Covid19 = () => {
 /** Require an array of Stuff documents in the props. */
 Covid19Map.propTypes = {
   datas: PropTypes.array.isRequired,
-  ready: PropTypes.bool.isRequired,
+  // ready: PropTypes.bool.isRequired,
 };
 
 /** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
-export default withTracker(() => {
-  // Get access to Data documents.
-  const subscription = Meteor.subscribe('Datas');
-  return {
-    datas: Datas.find({}).fetch(),
-    ready: subscription.ready(),
-  };
-})(Covid19Map);
+export default (Covid19Map);
