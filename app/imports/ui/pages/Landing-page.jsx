@@ -5,9 +5,12 @@ import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import Covid19Map from '../components/Covid19Map';
 import { Datas } from '../../api/dataDensity/Datas';
+import About from '../components/About';
+
 /** Renders a color-blocked static landing page. */
 
 class LandingPage extends React.Component {
+
   render() {
     return (this.props.ready) ? this.renderPage() : <Loader>Getting data</Loader>;
   }
@@ -27,9 +30,10 @@ class LandingPage extends React.Component {
               </div>
             </Container>
           </div>
-          <div><Covid19Map
-              datas = {this.props.datas}
-          /></div>
+          <Covid19Map
+              datas={this.props.datas}
+          />
+          <About/>
         </div>
     );
   }

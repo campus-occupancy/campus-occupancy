@@ -2,7 +2,7 @@ import papa from 'papaparse';
 // import { _ } from 'meteor/underscore';
 // import { withTracker } from 'meteor/react-meteor-data';
 // import PropTypes from 'prop-types';
-// import { features } from '../data/campusmap.json';
+ import { features } from '../data/campusmap.json';
 import legendItems from '../entities/LegendItems';
 // import DataItem from '../imports/ui/components/DataItem';
 // import { Datas } from '../imports/api/dataDensity/Datas';

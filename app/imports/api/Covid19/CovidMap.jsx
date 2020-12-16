@@ -16,7 +16,7 @@ const CovidMap = () => {
     layer.options.fillColor = building.properties.color;
     const name = building.properties.Building;
     const confirmedText = building.properties.confirmedText;
-    layer.bindPopup(`${name} ${confirmedText}`);
+    layer.bindPopup(`${name}, Occupancy: ${confirmedText}`);
   };
 
   // eslint-disable-next-line consistent-return
@@ -24,7 +24,7 @@ const CovidMap = () => {
     if (building.properties.Building === 'Art') return true;
   }; */
 
-  return (<Map style={{ height: '90vh' }} zoom={17} center={[21.29930, -157.81563]}>
+  return (<Map style={{ height: '90vh' }} zoom={17} center={[21.29930, -157.81563]} scrollWheelZoom={false}>
         <GeoJSON
             style={mapStyle}
             data={datas}
