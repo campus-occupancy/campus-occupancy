@@ -1,16 +1,16 @@
 import papa from 'papaparse';
-import { _ } from 'meteor/underscore';
-import { withTracker } from 'meteor/react-meteor-data';
-import PropTypes from 'prop-types';
-import { features } from '../data/campusmap.json';
+// import { _ } from 'meteor/underscore';
+// import { withTracker } from 'meteor/react-meteor-data';
+// import PropTypes from 'prop-types';
+// import { features } from '../data/campusmap.json';
 import legendItems from '../entities/LegendItems';
-import DataItem from '../imports/ui/components/DataItem';
-import { Datas } from '../imports/api/dataDensity/Datas';
+// import DataItem from '../imports/ui/components/DataItem';
+// import { Datas } from '../imports/api/dataDensity/Datas';
 
 /**
-* File: LoadBuildingsTask
-* Description: This task of this class is basically to gather data and parses it into a json file
-* which is then used by the Covid components to display it on the map
+ * File: LoadBuildingsTask
+ * Description: This task of this class is basically to gather data and parses it into a json file
+ * which is then used by the Covid components to display it on the map
  */
 
 class LoadBuildingsTask {
@@ -19,7 +19,7 @@ class LoadBuildingsTask {
 
   setState = null;
 
- load = (setState) => {
+  load = (setState) => {
     this.setState = setState;
     //const covid19Data = this.props.data;
     //this.#processCovidData(covid19Data);

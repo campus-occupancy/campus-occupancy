@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 import { Datas } from '../../api/dataDensity/Datas';
 import DataItem from '../components/DataItem';
 import Covid19Map from '../components/Covid19Map';
-import Covid19 from '../../api/Covid19/Covid19';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class ListData extends React.Component {
@@ -20,7 +19,9 @@ class ListData extends React.Component {
   renderPage() {
     return (
         <Container>
-          <div><Covid19/></div>
+          <div><Covid19Map
+              datas = {this.props.datas}
+          /></div>
           <Header as="h2" textAlign="center">Occupancy Data</Header>
           <Table celled>
             <Table.Header>

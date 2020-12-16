@@ -1,10 +1,8 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { NavLink } from 'react-router-dom';
-import { Container, Header, Button, Icon, Image, Loader } from 'semantic-ui-react';
+import { Container, Header, Image, Loader } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
-import Covid19 from '../../api/Covid19/Covid19';
 import Covid19Map from '../components/Covid19Map';
 import { Datas } from '../../api/dataDensity/Datas';
 /** Renders a color-blocked static landing page. */

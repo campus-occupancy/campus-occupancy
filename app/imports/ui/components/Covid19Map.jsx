@@ -1,44 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { Meteor } from 'meteor/meteor';
-import { Loader } from 'semantic-ui-react';
-import { withTracker } from 'meteor/react-meteor-data';
+import React from 'react';
 import PropTypes from 'prop-types';
-import papa from 'papaparse';
-import { Datas } from '../../api/dataDensity/Datas';
 import { features } from '../../../data/campusmap.json';
 import legendItems from '../../../entities/LegendItems';
-import LoadBuildingsTask from '../../../tasks/LoadBuildingsTask';
-import Loading from '../../api/Covid19/Loading';
 import CovidSlider from '../../api/Covid19/covidSlider';
 import CovidMap from '../../api/Covid19/CovidMap';
 import Legend from '../../api/Covid19/Legend';
-
-/*
-
-const Covid19 = () => {
-  const [buildings, setBuildings] = useState([]); // possibly have to change this line
-  const legendItemsInReverse = [...legendItems].reverse();
-
-  const load = (setState) => {
-    this.setState = setState;
-    const covid19Data = this.props.data;
-    this.processCovidData(covid19Data);
-
-  };
-
-  useEffect(load, []);
-  return (
-      <div>
-        {buildings.length === 0 ? <Loading/> : <div>
-          <div className='container'>
-            <div className="text-block"><CovidSlider/></div>
-          </div>
-          <CovidMap/>
-
-        </div>
-        }
-      </div>);
-}; */
 
  class Covid19Map extends React.Component {
    constructor(props) {
@@ -101,13 +67,10 @@ const Covid19 = () => {
 
     return (
         <div>
-           <div>
             <div className='container'>
-              <div className="text-block"><CovidSlider/></div>
             </div>
             <CovidMap/>
             <Legend legendItems={legendItemsInReverse}/>
-          </div>
         </div>
         // <div> THIS IS A MAP</div>
 

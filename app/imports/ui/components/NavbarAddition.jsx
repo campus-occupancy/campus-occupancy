@@ -2,7 +2,7 @@ import React from 'react';
 import 'semantic-ui-css/semantic.css';
 
 import 'semantic-ui-css/semantic.min.css';
-import { Container, Header, Icon } from 'semantic-ui-react';
+import { Container } from 'semantic-ui-react';
 
 /** The NavbarAddition appears at the bottom of every page. Rendered by the App Layout component. */
 
