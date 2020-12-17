@@ -17,9 +17,62 @@ import { Datas } from '../../api/dataDensity/Datas';
       value: ds.dateTime,
     })); */
  const options = [
-  { key: 1, text: '2020-0824_300am-559am', value: '2020-0824_300am-559am' },
-  { key: 2, text: '2020-0824_600pm-859pm', value: '2020-0824_600pm-859pm' },
-  { key: 3, text: '2020-0824_900am-1159am', value: '2020-0824_900am-1159am' },
+   { key: 1, text: '2020-0824_300am-559am', value: '2020-0824_300am-559am' },
+   { key: 2, text: '2020-0824_600am-859am', value: '2020-0824_600am-859am' },
+   { key: 3, text: '2020-0824_900am-1159am', value: '2020-0824_900am-1159am' },
+   { key: 4, text: '2020-0824_1200pm-259pm', value: '2020-0824_1200pm-259pm' },
+   { key: 5, text: '2020-0824_300pm-559pm', value: '2020-0824_300pm-559pm' },
+   { key: 6, text: '2020-0824_600pm-859pm', value: '2020-0824_600pm-859pm' },
+   { key: 7, text: '2020-0824_900pm-1159pm', value: '2020-0824_900pm-1159pm' },
+   { key: 8, text: '2020-0825_1200am-259am', value: '2020-0825_1200am-259am' },
+   { key: 9, text: '2020-0825_300am-559am', value: '2020-0825_300am-559am' },
+   { key: 10, text: '2020-0825_600am-859am', value: '2020-0825_600am-859am' },
+   { key: 11, text: '2020-0825_900am-1159am', value: '2020-0825_900am-1159am' },
+   { key: 12, text: '2020-0825_1200pm-259pm', value: '2020-0825_1200pm-259pm' },
+   { key: 13, text: '2020-0825_300pm-559pm', value: '2020-0825_300pm-559pm' },
+   { key: 14, text: '2020-0825_600pm-859pm', value: '2020-0825_600pm-859pm' },
+   { key: 15, text: '2020-0825_900pm-1159pm', value: '2020-0825_900pm-1159pm' },
+   { key: 16, text: '2020-0826_1200am-259am', value: '2020-0826_1200am-259am' },
+   { key: 17, text: '2020-0826_300am-559am', value: '2020-0826_300am-559am' },
+   { key: 18, text: '2020-0826_600am-859am', value: '2020-0826_600am-859am' },
+   { key: 19, text: '2020-0826_900am-1159am', value: '2020-0826_900am-1159am' },
+   { key: 20, text: '2020-0826_1200pm-259pm', value: '2020-0826_1200pm-259pm' },
+   { key: 21, text: '2020-0826_300pm-559pm', value: '2020-0826_300pm-559pm' },
+   { key: 22, text: '2020-0826_600pm-859pm', value: '2020-0826_600pm-859pm' },
+   { key: 23, text: '2020-0826_900pm-1159pm', value: '2020-0826_900pm-1159pm' },
+   { key: 24, text: '2020-0827_1200am-259am', value: '2020-0827_1200am-259am' },
+   { key: 25, text: '2020-0827_300am-559am', value: '2020-0827_300am-559am' },
+   { key: 26, text: '2020-0827_600am-859am', value: '2020-0827_600am-859am' },
+   { key: 27, text: '2020-0827_900am-1159am', value: '2020-0827_900am-1159am' },
+   { key: 28, text: '2020-0827_1200pm-259pm', value: '2020-0827_1200pm-259pm' },
+   { key: 29, text: '2020-0827_300pm-559pm', value: '2020-0827_300pm-559pm' },
+   { key: 30, text: '2020-0827_600pm-859pm', value: '2020-0827_600pm-859pm' },
+   { key: 31, text: '2020-0827_900pm-1159pm', value: '2020-0827_900pm-1159pm' },
+   { key: 32, text: '2020-0828_1200am-259am', value: '2020-0828_1200am-259am' },
+   { key: 33, text: '2020-0828_300am-559am', value: '2020-0828_300am-559am' },
+   { key: 34, text: '2020-0828_600am-859am', value: '2020-0828_600am-859am' },
+   { key: 35, text: '2020-0828_900am-1159am', value: '2020-0828_900am-1159am' },
+   { key: 36, text: '2020-0828_1200pm-259pm', value: '2020-0828_1200pm-259pm' },
+   { key: 37, text: '2020-0828_300pm-559pm', value: '2020-0828_300pm-559pm' },
+   { key: 38, text: '2020-0828_600pm-859pm', value: '2020-0828_600pm-859pm' },
+   { key: 39, text: '2020-0828_900pm-1159pm', value: '2020-0828_900pm-1159pm' },
+   { key: 40, text: '2020-0829_1200am-259am', value: '2020-0829_1200am-259am' },
+   { key: 41, text: '2020-0829_300am-559am', value: '2020-0829_300am-559am' },
+   { key: 42, text: '2020-0829_600am-859am', value: '2020-0829_600am-859am' },
+   { key: 43, text: '2020-0829_900am-1159am', value: '2020-0829_900am-1159am' },
+   { key: 44, text: '2020-0829_1200pm-259pm', value: '2020-0829_1200pm-259pm' },
+   { key: 45, text: '2020-0829_300pm-559pm', value: '2020-0829_300pm-559pm' },
+   { key: 46, text: '2020-0829_600pm-859pm', value: '2020-0829_600pm-859pm' },
+   { key: 47, text: '2020-0829_900pm-1159pm', value: '2020-0829_900pm-1159pm' },
+   { key: 48, text: '2020-0830_1200am-259am', value: '2020-0830_1200am-259am' },
+   { key: 49, text: '2020-0830_300am-559am', value: '2020-0830_300am-559am' },
+   { key: 50, text: '2020-0830_600am-859am', value: '2020-0830_600am-859am' },
+   { key: 51, text: '2020-0830_900am-1159am', value: '2020-0830_900am-1159am' },
+   { key: 52, text: '2020-0830_1200pm-259pm', value: '2020-0830_1200pm-259pm' },
+   { key: 53, text: '2020-0830_300pm-559pm', value: '2020-0830_300pm-559pm' },
+   { key: 54, text: '2020-0830_600pm-859pm', value: '2020-0830_600pm-859pm' },
+   { key: 55, text: '2020-0830_900pm-1159pm', value: '2020-0830_900pm-1159pm' },
+   { key: 48, text: '2020-0831_1200am-259am', value: '2020-0831_1200am-259am' },
 ];
 
 class Covid19Map extends React.Component {
@@ -31,6 +84,7 @@ class Covid19Map extends React.Component {
     this.state = {
       features: undefined,
       target: '2020-0824_300am-559am',
+      target: undefined,
     };
     this.getDates = this.getDates.bind(this);
   }
@@ -82,7 +136,6 @@ class Covid19Map extends React.Component {
       }
       this.#setBuildingColor(building);
     }
-
     this.setState(features);
   }
 
