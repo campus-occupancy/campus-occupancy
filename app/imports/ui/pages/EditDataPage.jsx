@@ -93,7 +93,7 @@ class EditDataPage extends React.Component {
                 University of Hawaii Campus Occupancy
               </Header>
               <Header style={{ paddingBottom: '20px', color: 'white' }} as='h3'>
-                Upload JSON or .csv file with your data
+                Upload a .csv file with your data
               </Header>
             </Container>
           </div>
