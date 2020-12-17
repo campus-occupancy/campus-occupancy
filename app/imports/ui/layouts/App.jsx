@@ -20,14 +20,16 @@ import LogIn from '../pages/LogIn';
 import EditDataPage from '../pages/EditDataPage';
 import CampusNavBar from '../components/CampusNavBar';
 import NavbarAddition from '../components/NavbarAddition';
+
 import Datas from '../pages/Datas';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
   render() {
+    const page = { width:'100%' };
     return (
       <Router>
-        <div>
+        <div style={page}>
           <NavbarAddition/>
           <CampusNavBar/>
             <Switch>

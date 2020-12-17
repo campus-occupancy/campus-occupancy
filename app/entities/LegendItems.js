@@ -10,15 +10,15 @@ import LegendItem from './LegendItem';
 */
 const legendItems = [
   new LegendItem(
-      '30+',
+      '50+',
       '#EA2027',
-      (cases) => cases >= 30,
+      (cases) => cases >= 50,
       'white',
   ),
   new LegendItem(
-      '20 - 29',
+      '20 - 50',
       '#d35400',
-      (cases) => cases >= 20 && cases < 30,
+      (cases) => cases >= 20 && cases < 50,
       'white',
   ),
   new LegendItem(

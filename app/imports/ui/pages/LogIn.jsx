@@ -55,10 +55,10 @@ export default class LogIn extends React.Component {
                   <Segment raised style={{ padding: '0px', border: 'none' }}>
                     <Container text fluid textAlign='center'
                                style={{
-                                 'padding-top': '20px',
-                                 'padding-bottom': '20px',
-                                 'background-color': '#376551',
-                                 'margin-bottom': '40px',
+                                 paddingTop: '20px',
+                                 paddingBottom: '20px',
+                                 backgroundColor: '#376551',
+                                 marginBottom: '40px',
                                }}>
                       <Header inverted as='h1' style={{ letterSpacing: '2px' }}>LOGIN</Header>
                     </Container>

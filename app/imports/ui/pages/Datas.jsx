@@ -23,7 +23,7 @@ class ListData extends React.Component {
               datas = {this.props.datas}
           /></div>
           <Header as="h2" textAlign="center">Occupancy Data</Header>
-          <Table celled>
+          <Table compact>
             <Table.Header>
               <Table.Row>
                 <Table.HeaderCell>Date/Time</Table.HeaderCell>
