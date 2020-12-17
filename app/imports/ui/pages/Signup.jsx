@@ -51,7 +51,7 @@ class Signup extends React.Component {
               <Grid.Column padded>
                 <Form onSubmit={this.submit}>
                   <Segment raised style={ { padding: '0px' } }>
-                    <Container text fluid textAlign='center'
+                    <Container fluid textAlign='center'
                                style={{
                                  'padding-top': '20px',
                                  'padding-bottom': '20px',

@@ -53,7 +53,7 @@ export default class LogIn extends React.Component {
               <Grid.Column>
                 <Form onSubmit={this.submit}>
                   <Segment raised style={{ padding: '0px', border: 'none' }}>
-                    <Container text fluid textAlign='center'
+                    <Container fluid textAlign='center'
                                style={{
                                  paddingTop: '20px',
                                  paddingBottom: '20px',
