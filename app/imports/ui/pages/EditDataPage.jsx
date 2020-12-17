@@ -83,6 +83,12 @@ class EditDataPage extends React.Component {
   }
 
   render() {
+    const color = {
+      boxShadow: 'none',
+      border: 'none', margin: '2rem 130px',
+    };
+    const text = { fontSize: '18.5px', letterSpacing: '2px' };
+    // const better = { padding: '30px' };
     return (
         <div id="importDatapage">
           <div className='landing-green-background'>
@@ -94,23 +100,11 @@ class EditDataPage extends React.Component {
                 Upload JSON or .csv file with your data
               </Header>
             </Container>
-            <Container style={better}>
-              <Segment textAlign="center" style={color}>
-                <p style={text}>Campus Occupancy is an application that shows the visualization of density on the UH Manoa
-                  campus. This app allows you view the amount of people in each building on the campus, just simply click on
-                  the building to view the amount of people. It also allows you to import data to create a new visualization
-                  based on the date or time.
-                </p>
-                <p style={text}>Our goal is to provide information for Manoa students to help keep them safe while attending
-                  classes on campus. </p>
-              </Segment>
-            </Container>
           </div>
           <div className={['background-landing-page']}>
-            <Grid textAlign='center'>
-              <Grid.Column>
+            <Grid container stackable columns={2} textAlign='center'>
+              <Grid.Column style={{ paddingTop: '24px' }}>
                 <Segment>
-
                     <Form widths='equal'>
                       <Input
                         size='large'
@@ -123,8 +117,16 @@ class EditDataPage extends React.Component {
                         Upload File
                       </Button>
                     </Form>
-
                 </Segment>
+              </Grid.Column>
+              <Grid.Column style={{ paddingTop: '24px', paddingBottom: '50px' }} textAlign='left'>
+
+                    <p style={text}>Campus Occupancy is an application that shows the visualization of density on the UH Manoa
+                      campus. Import your data in a .csv file to view it on the map.
+                    </p>
+                {/* eslint-disable-next-line react/no-unescaped-entities */}
+                    <p style={text}> Please have the file in the following format dateTime', 'Building', 'Unique'. </p>
+
               </Grid.Column>
             </Grid>
           </div>

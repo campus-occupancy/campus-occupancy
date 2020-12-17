@@ -10,7 +10,7 @@ class FooterAddition extends React.Component {
 
   render() {
     const header = { fontSize: '12px', color: 'white' };
-    const footercolor = { backgroundColor: '#376551', paddingLeft: '50px', paddingTop: '20px', paddingBottom: '20px' };
+    const footercolor = { backgroundColor: '#376551', paddingLeft: '50px', paddingTop: '20px', paddingBottom: '20px', width: 'auto' };
     const marginFix = { marginRight: '1px' };
     return (
         <Container textAlign="left" style={footercolor}>

@@ -5,7 +5,13 @@ import { Container, Grid, Image, Segment } from 'semantic-ui-react';
 class Footer extends React.Component {
   render() {
     const header = { fontSize: '14px', color: 'white', paddingBottom: '5px', letterspacing: '3px' };
-    const footercolor = { backgroundColor: '#363636', paddingLeft: '50px', paddingTop: '50px', paddingBottom: '50px' };
+    const footercolor = {
+      backgroundColor: '#363636',
+      paddingLeft: '50px',
+      paddingTop: '50px',
+      paddingBottom: '50px',
+      width: 'auto',
+    };
     const footercolor2 = { backgroundColor: '#363636', border: 'none', boxShadow: 'none' };
     const columnpicAdjust = { paddingLeft: '70px' };
     return (
@@ -15,7 +21,7 @@ class Footer extends React.Component {
               <Grid columns={3} relaxed='very'>
                 <Grid.Column style={columnpicAdjust}>
                   <p>
-                    <Image size='medium' src="/images/uhm-white-seal-nameplate.png" />
+                    <Image size='medium' src="/images/uhm-white-seal-nameplate.png"/>
                   </p>
                 </Grid.Column>
                 <Grid.Column>
@@ -44,11 +50,11 @@ class Footer extends React.Component {
                 <Grid.Column>
                 </Grid.Column>
               </Grid>
-              </Segment>
+            </Segment>
           </Container>
         </div>
-  );
-}
+    );
+  }
 }
 
 export default Footer;
