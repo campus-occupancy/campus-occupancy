@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { _ } from 'meteor/underscore';
 import './CovidSliderstyle.css';
 import PropTypes from 'prop-types';
@@ -10,47 +10,66 @@ import Legend from '../../api/Covid19/Legend';
 import CovidSlider from '../../api/Covid19/covidSlider';
 import { Datas } from '../../api/dataDensity/Datas';
 
-function getDate(date) {
-  const dateTime = _.pluck(Datas.collection.find({ densityData: date }).fetch(), 'dateTime');
-  console.log(dateTime);
-  return _.extend({ }, dateTime);
-}
+
 /* const options = _.map(ds => ({
       key: ds.dateTime,
       text: ds.dateTime,
       value: ds.dateTime,
     })); */
  const options = [
-  { key: 1, text: 'Choice 1', value: 1 },
-  { key: 2, text: 'Choice 2', value: 2 },
-  { key: 3, text: 'Choice 3', value: 3 },
+  { key: 1, text: '2020-0824_300am-559am', value: '2020-0824_300am-559am' },
+  { key: 2, text: '2020-0824_600pm-859pm', value: '2020-0824_600pm-859pm' },
+  { key: 3, text: '2020-0824_900am-1159am', value: '2020-0824_900am-1159am' },
 ];
 
 class Covid19Map extends React.Component {
+
   constructor(props) {
     super(props);
     // console.log(this.props.datas);
     this.load();
     this.state = {
       features: undefined,
+      target: '2020-0824_300am-559am',
     };
+    this.getDates = this.getDates.bind(this);
   }
 
   load = () => {
     // this.setState = setState;
     const covid19Data = this.props.datas;
+    //const stuffs = covid19Data.filter(stuffs => );
     // console.log(`This is the data${this.props.datas}`);
     this.#processCovidData(covid19Data);
-
   };
+
+   getDates(event) {
+     const targets = event.target.textContent;
+    /* const temp = Datas.find({}).fetch();
+    const dateTime = _.pluck(temp, 'dateTime');
+    console.log(dateTime);
+    console.log(_.extend({ }, dateTime));
+    const data = _.extend({ }, dateTime);*/
+     this.setState({
+       target: targets,
+     });
+     console.log(targets);
+  }
 
   // covidBuildings = this.props.datas;
 
   #processCovidData = (covidBuildings) => {
+     let target = '2020-0824_300am-559am';
+     if (this.state !== undefined) {
+       target = this.state.target;
+     }
     for (let i = 0; i < features.length; i++) {
       const building = features[i];
       // eslint-disable-next-line no-shadow,no-loop-func
-      const covidBuilding = covidBuildings.find((covidBuilding) => building.properties.Building === covidBuilding.Building);
+      //const covidBuilding = covidBuildings.find((covidBuilding) => building.properties.Building === covidBuilding.Building);
+      // eslint-disable-next-line no-shadow
+      const covidBuilding = covidBuildings.find((covidBuilding) => building.properties.Building ===
+          covidBuilding.Building && covidBuilding.dateTime === target);
 
       building.properties.confirmed = 0;
       building.properties.confirmedText = '0';
@@ -65,7 +84,6 @@ class Covid19Map extends React.Component {
     }
 
     this.setState(features);
-
   }
 
   #setBuildingColor = (building) => {
@@ -86,8 +104,8 @@ class Covid19Map extends React.Component {
               <Menu compact>
               <Dropdown
                   text='Date/time'
+                  onChange={this.getDates}
                   options={options}
-                  onChange={this.getDate}
                   simple item
               />
             </Menu></div>
