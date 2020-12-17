@@ -83,10 +83,6 @@ class EditDataPage extends React.Component {
   }
 
   render() {
-    const color = {
-      boxShadow: 'none',
-      border: 'none', margin: '2rem 130px',
-    };
     const text = { fontSize: '18.5px', letterSpacing: '2px' };
     // const better = { padding: '30px' };
     return (
