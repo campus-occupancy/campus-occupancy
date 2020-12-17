@@ -10,7 +10,6 @@ import Legend from '../../api/Covid19/Legend';
 import CovidSlider from '../../api/Covid19/covidSlider';
 import { Datas } from '../../api/dataDensity/Datas';
 
-
 /* const options = _.map(ds => ({
       key: ds.dateTime,
       text: ds.dateTime,
@@ -72,7 +71,7 @@ import { Datas } from '../../api/dataDensity/Datas';
    { key: 53, text: '2020-0830_300pm-559pm', value: '2020-0830_300pm-559pm' },
    { key: 54, text: '2020-0830_600pm-859pm', value: '2020-0830_600pm-859pm' },
    { key: 55, text: '2020-0830_900pm-1159pm', value: '2020-0830_900pm-1159pm' },
-   { key: 48, text: '2020-0831_1200am-259am', value: '2020-0831_1200am-259am' },
+   { key: 56, text: '2020-0831_1200am-259am', value: '2020-0831_1200am-259am' },
 ];
 
 class Covid19Map extends React.Component {
@@ -83,8 +82,8 @@ class Covid19Map extends React.Component {
     this.load();
     this.state = {
       features: undefined,
-      target: '2020-0824_300am-559am',
       target: undefined,
+      refresh: false,
     };
     this.getDates = this.getDates.bind(this);
   }
@@ -92,7 +91,7 @@ class Covid19Map extends React.Component {
   load = () => {
     // this.setState = setState;
     const covid19Data = this.props.datas;
-    //const stuffs = covid19Data.filter(stuffs => );
+    // const stuffs = covid19Data.filter(stuffs => );
     // console.log(`This is the data${this.props.datas}`);
     this.#processCovidData(covid19Data);
   };
@@ -103,27 +102,28 @@ class Covid19Map extends React.Component {
     const dateTime = _.pluck(temp, 'dateTime');
     console.log(dateTime);
     console.log(_.extend({ }, dateTime));
-    const data = _.extend({ }, dateTime);*/
+    const data = _.extend({ }, dateTime); */
      this.setState({
        target: targets,
      });
+     this.#processCovidData(this.props.datas.filter((dates) => targets === dates.dateTime));
      console.log(targets);
   }
 
   // covidBuildings = this.props.datas;
 
   #processCovidData = (covidBuildings) => {
-     let target = '2020-0824_300am-559am';
+     /*let target = '2020-0824_300am-559am';
      if (this.state !== undefined) {
        target = this.state.target;
-     }
+     }*/
     for (let i = 0; i < features.length; i++) {
       const building = features[i];
       // eslint-disable-next-line no-shadow,no-loop-func
-      //const covidBuilding = covidBuildings.find((covidBuilding) => building.properties.Building === covidBuilding.Building);
+      // const covidBuilding = covidBuildings.find((covidBuilding) => building.properties.Building === covidBuilding.Building);
       // eslint-disable-next-line no-shadow
       const covidBuilding = covidBuildings.find((covidBuilding) => building.properties.Building ===
-          covidBuilding.Building && covidBuilding.dateTime === target);
+          covidBuilding.Building);
 
       building.properties.confirmed = 0;
       building.properties.confirmedText = '0';
@@ -137,6 +137,7 @@ class Covid19Map extends React.Component {
       this.#setBuildingColor(building);
     }
     this.setState(features);
+    this.setState({ refresh: true });
   }
 
   #setBuildingColor = (building) => {
@@ -150,6 +151,29 @@ class Covid19Map extends React.Component {
     // const mapData = processCovidData(this.props.datas);
     const legendItemsInReverse = [...legendItems].reverse();
 
+    if (this.state.refresh === false) {
+      return (
+          <div>
+            <div className='container'>
+              <div className="text-block">
+                <Menu compact>
+                  <Dropdown
+                      text='Date/time'
+                      onChange={this.getDates}
+                      options={options}
+                      simple item
+                  />
+                </Menu></div>
+            </div>
+            <CovidMap/>
+            <Legend legendItems={legendItemsInReverse}/>
+          </div>
+          // <div> THIS IS A MAP</div>
+
+      );
+    }
+
+    this.setState({ refresh: false });
     return (
         <div>
           <div className='container'>
@@ -163,7 +187,6 @@ class Covid19Map extends React.Component {
               />
             </Menu></div>
           </div>
-            <CovidMap/>
           <Legend legendItems={legendItemsInReverse}/>
         </div>
         // <div> THIS IS A MAP</div>
