@@ -26,25 +26,25 @@ class Footer extends React.Component {
                 </Grid.Column>
                 <Grid.Column>
                   <div style={header}>
-                    A-Z Index
+                    < a href='https://manoa.hawaii.edu/a-z/'> A-Z Index </a>
                   </div>
                   <div style={header}>
-                    Academic Calendar
+                    < a href='https://manoa.hawaii.edu/registrar/academic-calendar/'> Academic Calendar </a>
                   </div>
                   <div style={header}>
-                    Accessibility at UH
+                    < a href='https://www.hawaii.edu/access/'> Accessibility at UH </a>
                   </div>
                   <div style={header}>
-                    Campus Directory
+                    < a href='https://www.hawaii.edu/access/'> Campus Directory </a>
                   </div>
                   <div style={header}>
-                    Campus Maps
+                    < a href='https://manoa.hawaii.edu/directory/'> Campus Maps </a>
                   </div>
                   <div style={header}>
-                    Parking & Transportation
+                    <a href='https://manoa.hawaii.edu/commuter/'> Parking & Transportation </a>
                   </div>
                   <div style={header}>
-                    Visiting the Campus
+                    <a href='https://manoa.hawaii.edu/about/visit/'> Visiting the Campus </a>
                   </div>
                 </Grid.Column>
                 <Grid.Column>
