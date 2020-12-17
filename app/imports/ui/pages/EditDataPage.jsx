@@ -94,6 +94,17 @@ class EditDataPage extends React.Component {
                 Upload JSON or .csv file with your data
               </Header>
             </Container>
+            <Container style={better}>
+              <Segment textAlign="center" style={color}>
+                <p style={text}>Campus Occupancy is an application that shows the visualization of density on the UH Manoa
+                  campus. This app allows you view the amount of people in each building on the campus, just simply click on
+                  the building to view the amount of people. It also allows you to import data to create a new visualization
+                  based on the date or time.
+                </p>
+                <p style={text}>Our goal is to provide information for Manoa students to help keep them safe while attending
+                  classes on campus. </p>
+              </Segment>
+            </Container>
           </div>
           <div className={['background-landing-page']}>
             <Grid textAlign='center'>
