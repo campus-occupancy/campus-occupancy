@@ -142,7 +142,7 @@ class Covid19Map extends React.Component {
                       text='Date/time'
                       onChange={this.getDates}
                       options={options}
-                      simple item
+                      search selection
                   />
                 </Menu></div>
             </div>
