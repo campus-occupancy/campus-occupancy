@@ -26,7 +26,7 @@ import Datas from '../pages/Datas';
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
   render() {
-    const page = { width:'100%' };
+    const page = { width: '100%' };
     return (
       <Router>
         <div style={page}>
