@@ -91,15 +91,15 @@ class EditDataPage extends React.Component {
                 University of Hawaii Campus Occupancy
               </Header>
               <Header style={{ paddingBottom: '20px', color: 'white' }} as='h3'>
-                Upload JSON or .csv file to Generate Map
+                Upload JSON or .csv file with your data
               </Header>
             </Container>
           </div>
           <div className={['background-landing-page']}>
-            <Grid container stackable columns={2} textAlign='center'>
+            <Grid textAlign='center'>
               <Grid.Column>
                 <Segment>
-                  <Container>
+
                     <Form widths='equal'>
                       <Input
                         size='large'
@@ -112,11 +112,8 @@ class EditDataPage extends React.Component {
                         Upload File
                       </Button>
                     </Form>
-                  </Container>
+
                 </Segment>
-              </Grid.Column>
-              <Grid.Column>
-                <Button color='black'>Generate Map</Button>
               </Grid.Column>
             </Grid>
           </div>
